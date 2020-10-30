@@ -20,7 +20,7 @@ source(file.path("R","Graph_Inertia_Plan1.R"))
 #-- executer les fonctions graphiques
 Fct_Graph_RV_Site(Detection="D1")
 Fct_Graph_RV_Sp(Detection="D5")
-Fct_Graph_G1_G2(Detection="D1",couleur_noir="couleur")
+Fct_Graph_G1_G2(Detection="D5",couleur_noir="couleur")
 Fct_Graph_GA_GB(Detection="D5",couleur_noir="couleur")
 Fct_Graph_Detect_D2D4(Detection="D2",couleur_noir="couleur")
 Fct_Graph_Detect_D5(Detection="D5",couleur_noir="couleur")

@@ -56,10 +56,11 @@ Fct_Graph_Inertia_Plan1<-function(Detection="D1") {
     boxplot(M_Inertia_Plan1_ACP[,colonnes],
             ylim=c(0,1),
             col=couleur,outline=FALSE,
-            ylab="Explained inertia (PCA)",cex.axis=1,
+            cex.axis=0.8,
             xlab=paste("PCA simulation ",Detection,sep=""),
-            xaxt="n",lwd=0.5,cex.lab=1,at=espbox)
+            xaxt="n",lwd=0.5,cex.lab=1.2,at=espbox)
     
+    title(ylab="Explained inertia (PCA)",line = 2,cex.lab=1.2)
     axis(1,at=c(0.5,3.5,6.5),labels = c("","C1",""),col="black",
          col.axis="black",lwd=1,cex.axis=0.8)
     axis(1,at=c(6.5,10,13.5),labels = c("","C2",""),col="red",
@@ -79,10 +80,11 @@ Fct_Graph_Inertia_Plan1<-function(Detection="D1") {
     boxplot(M_Inertia_Plan1_AFC[,colonnes],
             ylim=c(0,1.0),
             col=couleur,outline=FALSE,
-            ylab="Explained inertia (CA)",cex.axis=1,
+            cex.axis=0.8,
             xlab=paste("CA simulation ",Detection,sep=""),
-            xaxt="n",lwd=0.5,cex.lab=1,at=espbox)
+            xaxt="n",lwd=0.5,cex.lab=1.2,at=espbox)
     
+    title(ylab="Explained inertia (CA)",line = 2,cex.lab=1.2)
     axis(1,at=c(0.5,3.5,6.5),labels = c("","C1",""),col="black",
          col.axis="black",lwd=1,cex.axis=0.8)
     axis(1,at=c(6.5,10,13.5),labels = c("","C2",""),col="red",
@@ -112,10 +114,11 @@ Fct_Graph_Inertia_Plan1<-function(Detection="D1") {
     boxplot(M_Inertia_Plan1_ACP[,colonnes],
             ylim=c(0,1),
             col=couleur,outline=FALSE,
-            ylab="Explained inertia (PCA)",cex.axis=1,
+            cex.axis=0.8,
             xlab=paste("PCA simulation ",Detection,sep=""),
-            xaxt="n",lwd=0.5,cex.lab=1,at=espbox)
+            xaxt="n",lwd=0.5,cex.lab=1.2,at=espbox)
     
+    title(ylab="Explained inertia (PCA)",line = 2,cex.lab=1.2)
     axis(1,at=c(0.5,1.25,2),labels = c("","C1",""),col="black",
          col.axis="black",lwd=1,cex.axis=0.8)
     axis(1,at=c(2,3,4),labels = c("","C2",""),col="red",
@@ -135,10 +138,11 @@ Fct_Graph_Inertia_Plan1<-function(Detection="D1") {
     boxplot(M_Inertia_Plan1_AFC[,colonnes],
             ylim=c(0,1.0),
             col=couleur,outline=FALSE,
-            ylab="Explained inertia (CA)",cex.axis=1,
+            cex.axis=0.8,
             xlab=paste("CA simulation ",Detection,sep=""),
-            xaxt="n",lwd=0.5,cex.lab=1,at=espbox)
+            xaxt="n",lwd=0.5,cex.lab=1.2,at=espbox)
     
+    title(ylab="Explained inertia (CA)",line = 2,cex.lab=1.2)
     axis(1,at=c(0.5,1.25,2),labels = c("","C1",""),col="black",
          col.axis="black",lwd=1,cex.axis=0.8)
     axis(1,at=c(2,3,4),labels = c("","C2",""),col="red",
@@ -169,10 +173,11 @@ Fct_Graph_Inertia_Plan1<-function(Detection="D1") {
     boxplot(M_Inertia_Plan1_ACP[,colonnes],
             ylim=c(0,1),
             col=noirblanc,outline=FALSE,
-            ylab="RV of distance matrix PCA_i /PCA_n",cex.axis=1,
+            cex.axis=0.8,
             xlab=paste("PCA simulation ",Detection,sep=""),
-            xaxt="n",lwd=0.5,cex.lab=1,at=espbox)
+            xaxt="n",lwd=0.5,cex.lab=1.2,at=espbox)
     
+    title(ylab="Explained inertia (PCA)",line = 2,cex.lab=1.2)
     axis(1,at=c(0.5,3.5,6.5),labels = c("","C1",""),col="black",
          col.axis="black",lwd=1,cex.axis=0.8)
     axis(1,at=c(6.5,10,13.5),labels = c("","C2",""),col="black",
@@ -192,10 +197,11 @@ Fct_Graph_Inertia_Plan1<-function(Detection="D1") {
     boxplot(M_Inertia_Plan1_AFC[,colonnes],
             ylim=c(0,1.0),
             col=noirblanc,outline=FALSE,
-            ylab="RV of distance matrix CA_i /CA_n",cex.axis=1,
+            cex.axis=0.8,
             xlab=paste("CA simulation ",Detection,sep=""),
-            xaxt="n",lwd=0.5,cex.lab=1,at=espbox)
+            xaxt="n",lwd=0.5,cex.lab=1.2,at=espbox)
     
+    title(ylab="Explained inertia (CA)",line = 2,cex.lab=1.2)
     axis(1,at=c(0.5,3.5,6.5),labels = c("","C1",""),col="black",
          col.axis="black",lwd=1,cex.axis=0.8)
     axis(1,at=c(6.5,10,13.5),labels = c("","C2",""),col="black",
@@ -225,10 +231,11 @@ Fct_Graph_Inertia_Plan1<-function(Detection="D1") {
     boxplot(M_Inertia_Plan1_ACP[,colonnes],
             ylim=c(0,1),
             col=noirblanc,outline=FALSE,
-            ylab="RV of distance matrix PCA_i /PCA_n",cex.axis=1,
+            cex.axis=0.8,
             xlab=paste("PCA simulation ",Detection,sep=""),
-            xaxt="n",lwd=0.5,cex.lab=1,at=espbox)
+            xaxt="n",lwd=0.5,cex.lab=1.2,at=espbox)
     
+    title(ylab="Explained inertia (PCA)",line = 2,cex.lab=1.2)
     axis(1,at=c(0.5,1.25,2),labels = c("","C1",""),col="black",
          col.axis="black",lwd=1,cex.axis=0.8)
     axis(1,at=c(2,3,4),labels = c("","C2",""),col="black",
@@ -248,10 +255,11 @@ Fct_Graph_Inertia_Plan1<-function(Detection="D1") {
     boxplot(M_Inertia_Plan1_AFC[,colonnes],
             ylim=c(0,1.0),
             col=noirblanc,outline=FALSE,
-            ylab="RV of distance matrix CA_i /CA_n",cex.axis=1,
+            cex.axis=0.8,
             xlab=paste("CA simulation ",Detection,sep=""),
-            xaxt="n",lwd=0.5,cex.lab=1,at=espbox)
+            xaxt="n",lwd=0.5,cex.lab=1.2,at=espbox)
     
+    title(ylab="Explained inertia (CA)",line = 2,cex.lab=1.2)
     axis(1,at=c(0.5,1.25,2),labels = c("","C1",""),col="black",
          col.axis="black",lwd=1,cex.axis=0.8)
     axis(1,at=c(2,3,4),labels = c("","C2",""),col="black",

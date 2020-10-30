@@ -23,7 +23,7 @@ Sim<-Fct_simulACP(Nsimul=10, Nplot=50, Nsp=20, minAbon=5, maxAbon=50,
                   fichier="Exemple_D1_C1_01")
 
 RV<-Fct_RV_ACP(Sim$Nsimul, "Site", Sim$A_TabCoordACP_Site, Sim$A_TabCoordACP_Site_Naive, Sim$fichier)
-Fct_Control_Sp_Absente_Perdue<-function(Analyse="ACP",Fichier=Sim$fichier)
+Fct_Control_Sp_Absente_Perdue(Analyse="ACP",Fichier=Sim$fichier)
   
 #-- une fois que toute les simulation sont faite (et apres avoir modifier si besoin
 #-- le script Noms-Fichiers)
@@ -51,13 +51,6 @@ Fct_Grp_detectD5_ACP()
 Fct_Grp_1_2_ACP()
 Fct_Grp_A_B_ACP()
 
-#----------------------------------#
-# extraction de donnees numeriques #
-#----------------------------------#
-#-- nettoyage
-rm(list = (ls()))
-
-#-- source les fonctions
 
 
 

@@ -51,13 +51,5 @@ Fct_Grp_detectD5_AFC()
 Fct_Grp_1_2_AFC()
 Fct_Grp_A_B_AFC()
 
-#----------------------------------#
-# extraction de donnees numeriques #
-#----------------------------------#
-#-- nettoyage
-rm(list = (ls()))
-
-#-- source les fonctions
-
 
 

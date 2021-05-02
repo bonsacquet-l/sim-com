@@ -6,6 +6,7 @@ output:
 # Le projet "sim-com"
 Ensemble des scripts utilisés pour le projet d'étude porté par L. Bonscaquet et A. Besnard.
 
+## Version précédente V1.0.0
 ### 1 les makes  
 Tout le projet est exécutable à partir des 3 make.R : make-ACP, make-AFC et make-Graph. 
 
@@ -46,6 +47,15 @@ En premier lieu il faut adapter le script "Noms-Fichiers.R" en fonction des beso
  
 ### 4 La réalisation des graphiques
 A l'aide du make.Graph.R
+
+## Nouvelle version V1.0.1
+Cette version se voit ajouter des scripts pour effectuer des PCoA et des nMDS avec des matrices de distances entre les sites. Les distances choisies sont les distances de Chao et la distance de Bray-Curtis sur la racine carrée des abondances (ou different percentage).  
+
+Un script est dédier a la fonction pour le calcul des RV entre matrices de distance entre les ordination informée et les ordinations naives (aussi bien pour les sites ou les especes, les PCoA et les nMDS, la distance de chao ou de Bray-Curtis).  
+
+Un script permet de produire les boxplots des RV cités ci-dessus (utilisé dans l'appendix S3).
+
+Un script permet de produire les images des ordinations informees et naives côte à côte.
 
 
 

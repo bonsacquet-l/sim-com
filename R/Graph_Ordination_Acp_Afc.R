@@ -94,8 +94,8 @@ G_ACP
 
 #-- sauvegarde
 saveData<-file.path("Outcome","out-graph",
-                    paste("G_ACP_",fichier,"_",simul,".pdf",sep=""))
-save_plot(saveData,G_ACP,ncol = 1,nrow = 1,base_width=7)
+                    paste("G_ACP_",fichier,"_",simul,".tiff",sep=""))
+save_plot(saveData,G_ACP,ncol = 1,nrow = 1,base_width=7,dpi=300)
 
 #-------------#
 # pour les CA #
@@ -174,6 +174,6 @@ G_AFC
 
 #-- sauvegarde
 saveData<-file.path("Outcome","out-graph",
-                    paste("G_AFC_",fichier,"_",simul,".pdf",sep=""))
-save_plot(saveData,G_AFC,ncol = 1,nrow = 1,base_width=7)
+                    paste("G_AFC_",fichier,"_",simul,".tiff",sep=""))
+save_plot(saveData,G_AFC,ncol = 1,nrow = 1,base_width=7,dpi=300)
 

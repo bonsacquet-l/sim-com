@@ -1,6 +1,6 @@
 #========================================================#
 # fonction pour le calcul des distances entre les points #
-# especes dans le premier plan des PCoA simulees         #
+# site et especes dans le premier plan des PCoA simulees #
 # et le coefficient RV entre les matrices de distances   #
 # lionel.bonsacquet                                      #
 #========================================================#
@@ -41,9 +41,9 @@ Fct_RV_pcoa<-function(distance="chao",
     try(Res_RV_Pcoa_Sp<-RVdist.randtest(M_Tab_Dist_pcoa_Sp,M_Tab_Dist_pcoa_Sp_Naive, nrepet = 999))
     
     #-- calculs pour les Site
-    try(M_Tab_Dist_pcoa_Site<-dist(A_Coord_pcoa_Sp[,,zz]))
-    try(M_Tab_Dist_pcoa_Site_Naive<-dist(A_Coord_pcoa_Sp_Naive[,,zz]))
-    try(Res_RV_pcoa_Site<-RVdist.randtest(M_Tab_Dist_pcoa_Sp,M_Tab_Dist_pcoa_Sp_Naive, nrepet = 999))
+    try(M_Tab_Dist_pcoa_Site<-dist(A_Coord_pcoa_Site[,,zz]))
+    try(M_Tab_Dist_pcoa_Site_Naive<-dist(A_Coord_pcoa_Site_Naive[,,zz]))
+    try(Res_RV_pcoa_Site<-RVdist.randtest(M_Tab_Dist_pcoa_Site,M_Tab_Dist_pcoa_Site_Naive, nrepet = 999))
     
     #-- stockage
     if (is.null(Res_RV_pcoa_Sp)==FALSE){

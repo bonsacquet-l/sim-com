@@ -99,10 +99,10 @@ fct_pcoa_site<-function(analyse="ACP", # sur simul faite pour ACP
   #-- les chemins de sauvegardes
   saveData<-file.path("Outcome","out-simul","PCoA",paste("PCoA_dist_",distance,"_",fichier,".Rdata",sep=""))
   
-  save(pcoa,pcoa_Naive,
+  save(Nsimul,Nplot,Nsp,
        A_Coord_pcoa_Site,A_Coord_pcoa_Site_Naive,
        A_Coord_pcoa_Sp,A_Coord_pcoa_Sp_Naive,
-       list = c("pcoa","pcoa_Naive",
+       list = c("Nsimul","Nplot","Nsp",
                 "A_Coord_pcoa_Site","A_Coord_pcoa_Site_Naive",
                 "A_Coord_pcoa_Sp","A_Coord_pcoa_Sp_Naive"),
        file = saveData)

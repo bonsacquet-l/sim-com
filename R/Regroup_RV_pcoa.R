@@ -3,7 +3,7 @@
 # de toutes les simulations des PCoA pour une distance donnee  #
 # lionel.bonsacquet                                            #
 #--------------------------------------------------------------#
-# executer dans le make_ACP
+# executer dans le make_pcoa
 
 Fct_Regroup_RV_pcoa<-function(Site_Sp="Site",distance="chao") {
   #-- Pour stocker les resultats

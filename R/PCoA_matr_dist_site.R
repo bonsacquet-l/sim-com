@@ -44,12 +44,12 @@ fct_pcoa_site<-function(analyse="ACP", # sur simul faite pour ACP
     M_MemAbonSqrt_Naive<-sqrt(A_MemAbon_Naive[,,zz])
     
     #-- calcul des distances a partir des abondances ou abondances transformees
-    if(distance="chao"){
+    if (distance=="chao"){
       try(M_DistSite<-vegdist(A_MemAbon[,,zz] ,method = "chao"))  # distance de jaccard modifier par chao pour les unseen species
       try(M_DistSite_Naive<-vegdist(A_MemAbon_Naive[,,zz] ,method = "chao"))
     }
     
-    if(distance="bray"){
+    if (distance=="bray"){
       try(M_DistSite<-vegdist(M_MemAbonSqrt, method = "bray"))  # distance de bray-curtis
       try(M_DistSite_Naive<-vegdist(M_MemAbonSqrt_Naive, method = "bray")) 
     }
@@ -74,7 +74,7 @@ fct_pcoa_site<-function(analyse="ACP", # sur simul faite pour ACP
     }
     
     #-- recup des coord des sp avec wascore de vegan
-    if (distance="chao"){
+    if (distance=="chao"){
       if (is.null(Pcoa)==FALSE){
         A_Coord_pcoa_Sp[,,zz]<-wascores(pcoa$points[1:Nplot,1:2],A_MemAbon[,,zz])
         A_Coord_pcoa_Sp_Naive[,,zz]<-wascores(pcoa_Naive$points[1:Nplot,1:2],A_MemAbon_Naive[,,zz])
@@ -84,7 +84,7 @@ fct_pcoa_site<-function(analyse="ACP", # sur simul faite pour ACP
       }
     }
     
-    if (distance="bray"){
+    if (distance=="bray"){
       if (is.null(pcoa)==FALSE){
         A_Coord_pcoa_Sp[,,zz]<-wascores(pcoa$points[1:Nplot,1:2],M_MemAbonSqrt)
         A_Coord_pcoa_Sp_Naive[,,zz]<-wascores(pcoa_Naive$points[1:Nplot,1:2],M_MemAbonSqrt_Naive)

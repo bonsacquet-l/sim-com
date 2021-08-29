@@ -42,7 +42,7 @@ fct_nmds_site<-function(analyse="AFC", # sur simul faite pour ACP
     Nmds_Abon_Naive<-NULL
 
     #-- le nmds sur les matrices de distance
-    if (distance="chao"){
+    if (distance=="chao"){
       try(Nmds_Abon<-metaMDS(A_MemAbon[,,zz],
                             distance = "chao", 
                             k = 2,
@@ -64,7 +64,7 @@ fct_nmds_site<-function(analyse="AFC", # sur simul faite pour ACP
         silent=FALSE)
     }
     
-    if (distance="bray"){
+    if (distance=="bray"){
       try(Nmds_Abon<-metaMDS(M_MemAbonSqrt,
                             distance = "bray", 
                             k = 2,

@@ -75,7 +75,7 @@ fct_pcoa_site<-function(analyse="ACP", # sur simul faite pour ACP
     
     #-- recup des coord des sp avec wascore de vegan
     if (distance=="chao"){
-      if (is.null(Pcoa)==FALSE){
+      if (is.null(pcoa)==FALSE){
         A_Coord_pcoa_Sp[,,zz]<-wascores(pcoa$points[1:Nplot,1:2],A_MemAbon[,,zz])
         A_Coord_pcoa_Sp_Naive[,,zz]<-wascores(pcoa_Naive$points[1:Nplot,1:2],A_MemAbon_Naive[,,zz])
       } else {

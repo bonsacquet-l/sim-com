@@ -38,7 +38,7 @@ Fct_RV_pcoa<-function(distance="chao",
     #-- calculs pour les Sp
     try(M_Tab_Dist_pcoa_Sp<-dist(A_Coord_pcoa_Sp[,,zz]))
     try(M_Tab_Dist_pcoa_Sp_Naive<-dist(A_Coord_pcoa_Sp_Naive[,,zz]))
-    try(Res_RV_Pcoa_Sp<-RVdist.randtest(M_Tab_Dist_pcoa_Sp,M_Tab_Dist_pcoa_Sp_Naive, nrepet = 999))
+    try(Res_RV_pcoa_Sp<-RVdist.randtest(M_Tab_Dist_pcoa_Sp,M_Tab_Dist_pcoa_Sp_Naive, nrepet = 999))
     
     #-- calculs pour les Site
     try(M_Tab_Dist_pcoa_Site<-dist(A_Coord_pcoa_Site[,,zz]))

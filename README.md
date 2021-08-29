@@ -45,10 +45,10 @@ Elles sont réalisées pour l'ensemble des simulations qui sont dans le même fi
 ### 3 La construction des indicateurs.
 En premier lieu il faut adapter le script "Noms-Fichiers.R" en fonction des besoins. Les fonctions "Fct_Regroup_RV_ACP("Sp")", "Fct_Regroup_Coord_Sp_ACP()", "Fct_Grp_detect_ACP()", "Fct_Grp_detectD5_ACP()", "Fct_Grp_1_2_ACP()" et "Fct_Grp_A_B_ACP()" s'exécutent sur cette base (les noms des fichiers qui ont été renseignés dans le scripts "Noms-Fichiers.R").
  
-### 4 La réalisation des graphiques
+### 4 La réalisation des graphiques  
 A l'aide du make.Graph.R
 
-## Nouvelle version V1.0.1
+## Nouvelle version V1.0.1  
 Cette version se voit ajouter des scripts pour effectuer des PCoA et des nMDS avec des matrices de distances entre les sites. Les distances choisies sont les distances de Chao et la distance de Bray-Curtis sur la racine carrée des abondances (ou different percentage).  
 
 Un script est dédier a la fonction pour le calcul des RV entre matrices de distance entre les ordination informée et les ordinations naives (aussi bien pour les sites ou les especes, les PCoA et les nMDS, la distance de chao ou de Bray-Curtis).  
@@ -57,5 +57,7 @@ Un script permet de produire les boxplots des RV cités ci-dessus (utilisé dans
 
 Un script permet de produire les images des ordinations informees et naives côte à côte.
 
-
+## Version 1.0.2  
+Cette version est augmenté pour pouvoir produire les différents indicateurs pour les analyses PCoA et nMDS en plus du calcul du RV déjà present dans la version précédente.
+Ces calculs reprennent le même cheminement que celui écrit pour les ACP et les AFC et se retrouve dans les make_pcoa et make_nmds
 

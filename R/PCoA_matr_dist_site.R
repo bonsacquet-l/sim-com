@@ -45,13 +45,13 @@ fct_pcoa_site<-function(analyse="ACP", # sur simul faite pour ACP
     
     #-- calcul des distances a partir des abondances ou abondances transformees
     if (distance=="chao"){
-      try(M_DistSite<-vegdist(A_MemAbon[,,zz] ,method = "chao"))  # distance de jaccard modifier par chao pour les unseen species
-      try(M_DistSite_Naive<-vegdist(A_MemAbon_Naive[,,zz] ,method = "chao"))
+      try(M_DistSite<-vegdist(A_MemAbon[,,zz] ,method = "chao"),silent = FALSE)  # distance de jaccard modifier par chao pour les unseen species
+      try(M_DistSite_Naive<-vegdist(A_MemAbon_Naive[,,zz] ,method = "chao"),silent = FALSE)
     }
     
     if (distance=="bray"){
-      try(M_DistSite<-vegdist(M_MemAbonSqrt, method = "bray"))  # distance de bray-curtis
-      try(M_DistSite_Naive<-vegdist(M_MemAbonSqrt_Naive, method = "bray")) 
+      try(M_DistSite<-vegdist(M_MemAbonSqrt, method = "bray"),silent = FALSE)  # distance de bray-curtis
+      try(M_DistSite_Naive<-vegdist(M_MemAbonSqrt_Naive, method = "bray"),silent=FALSE) 
     }
     
     
@@ -60,9 +60,11 @@ fct_pcoa_site<-function(analyse="ACP", # sur simul faite pour ACP
     #M_DistSite_Naive_bray<-quasieuclid(M_DistSite_Naive_bray)
     
     #-- le PCoA sur les matrices de distance avec cmdscale de vegan
-    if (max(M_DistSite)!=0 & max(M_DistSite_Naive)!=0){            # si que des distances nulle, PCoA impossible
-      try(pcoa<-cmdscale(d=M_DistSite,k=2,add = TRUE))
-      try(pcoa_Naive<-cmdscale(d=M_DistSite_Naive,k=2,add = TRUE))}
+    if (is.null(M_DistSite)==FALSE & is.null(M_DistSite_Naive)==FALSE){
+      if (max(M_DistSite)!=0 & max(M_DistSite_Naive)!=0){            # si que des distances nulle, PCoA impossible
+      try(pcoa<-cmdscale(d=M_DistSite,k=2,add = TRUE),silent=FALSE)
+      try(pcoa_Naive<-cmdscale(d=M_DistSite_Naive,k=2,add = TRUE),silent = FALSE)}
+    }
     
     #-- recup des coord des pts sites dans le premier plan
     if (is.null(pcoa)==FALSE){

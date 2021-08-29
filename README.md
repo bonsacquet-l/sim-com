@@ -58,6 +58,9 @@ Un script permet de produire les boxplots des RV cités ci-dessus (utilisé dans
 Un script permet de produire les images des ordinations informees et naives côte à côte.
 
 ## Version 1.0.2  
-Cette version est augmenté pour pouvoir produire les différents indicateurs pour les analyses PCoA et nMDS en plus du calcul du RV déjà present dans la version précédente.
-Ces calculs reprennent le même cheminement que celui écrit pour les ACP et les AFC et se retrouve dans les make_pcoa et make_nmds
+Cette version est augmenté pour pouvoir produire les différents indicateurs pour les analyses PCoA et nMDS en plus du calcul du RV déjà present dans la version précédente.  
+
+Ces calculs reprennent le même cheminement que celui écrit pour les ACP et les AFC et se retrouve dans les make_pcoa et make_nmds et dans le make_Graph.  
+C'est pourquoi les scripts dédier aux PCoA et nMDS, sont dans cette version séparé pour l'ensemble des calculs.
+
 

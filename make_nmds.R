@@ -9,53 +9,55 @@ rm(list = (ls()))
 #-- sourcer les script necessaire
 source(file.path("R","package-option.R"))
 source(file.path("R","Noms-Fichiers.R"))
-source(file.path("R","NMDS_matr_comm_Site_Sp.R"))
-source(file.path("R","RV_Nmds.R")) 
+source(file.path("R","nMDS_matr_dist_site.R"))
+source(file.path("R","RV_nmds.R")) 
+source(file.path("R","Regroup_RV_nmds.R")) 
+source(file.path("R","Regroup_Coord_Sp_nmds.R")) 
+source(file.path("R","Grp_Plus_Moins_detectable_D2D4_nmds.R")) 
+source(file.path("R","Grp_Plus_Moins_detectable_D5_nmds.R")) 
+source(file.path("R","Grp_1_2_nmds.R")) 
+source(file.path("R","Grp_A_B_nmds.R")) 
 
-#AFC
-#-- nmds sur les matrice de communaute --#
-#-- appliquer en boucle sur les noms des fichiers (au cas ou plus de 1) 
-  for (i in V_Nom_Fichier[73]) {
-    fct_nmds_comm_site_sp(analyse="AFC",fichier=i)}
+# nMDS (sur les meme simuls que celle des AFC)
+#-- nMDS sur les matrice de distance --#
+#-- appliquer en boucle sur les noms des fichiers (au cas ou plus de 1)
+for (i in V_Nom_Fichier) {
+  fct_nmds_site(analyse="AFC",distance="chao",fichier=i)}
 
-  for (i in V_Nom_Fichier[83]) {
-    fct_nmds_comm_site_sp(analyse="AFC",fichier=i)}
+for (i in V_Nom_Fichier) {
+  fct_nmds_site(analyse="AFC",distance="bray",fichier=i)}
 
-#-- calcul des Rv sue les differentes matrice de distances (reresentation des points dans un 
+#-- calcul des Rv sur les differentes matrice de distances (reresentation des points dans un 
 #   espace euclidien)
-  # chargement des donnees
-  load("~/Desktop/sim-com/Outcome/out-simul/AFC/AFC_nmds_site_sp_D4_C3_05.Rdata")
-  i<-V_Nom_Fichier[73]
-  
-  load("~/Desktop/sim-com/Outcome/out-simul/AFC/AFC_nmds_site_sp_D5_C3.Rdata")
-  i<-V_Nom_Fichier[83]
-  
-  #application de la fonction effectuant le RV entre matrice de distance
-  Fct_RV_Nmds(Nsimul=1000,
-              analyse="AFC",
-              A_Coord_Nmds=A_Coord_Nmds_com_Site_chao,
-              A_Coord_Nmds_Naive=A_Coord_Nmds_com_Site_Naive_chao,
-              fichier=i,
-              info_save="Nmds_site_chao")
-  
-  Fct_RV_Nmds(Nsimul=1000,
-              analyse="AFC",
-              A_Coord_Nmds=A_Coord_Nmds_com_Sp_chao,
-              A_Coord_Nmds_Naive=A_Coord_Nmds_com_Sp_Naive_chao,
-              fichier=i,
-              info_save="Nmds_sp_chao")
-  
-  Fct_RV_Nmds(Nsimul=1000,
-              analyse="AFC",
-              A_Coord_Nmds=A_Coord_Nmds_com_Site_bray,
-              A_Coord_Nmds_Naive=A_Coord_Nmds_com_Site_Naive_bray,
-              fichier=i,
-              info_save="Nmds_site_bray")
-  
-  Fct_RV_Nmds(Nsimul=1000,
-              analyse="AFC",
-              A_Coord_Nmds=A_Coord_Nmds_com_Sp_bray,
-              A_Coord_Nmds_Naive=A_Coord_Nmds_com_Sp_Naive_bray,
-              fichier=i,
-              info_save="Nmds_sp_bray")
-  
+for (i in V_Nom_Fichier) {
+  Fct_RV_nmds(distance="chao",fichier=i)}
+
+for (i in V_Nom_Fichier) {
+  Fct_RV_nmds(distance="bray",fichier=i)}
+
+#-- regoupment des RV sur les resultats des nMDS pour les graphiques
+Fct_Regroup_RV_nmds(Site_Sp="Site",distance="chao")
+Fct_Regroup_RV_nmds(Site_Sp="Sp",distance="chao")
+Fct_Regroup_RV_nmds(Site_Sp="Site",distance="bray")
+Fct_Regroup_RV_nmds(Site_Sp="Sp",distance="bray")
+
+#-- regroupement des coordonnees des Sp (que les especes) en fonction des groupe 1 et 2
+Fct_Regroup_Coord_Sp_nmds(distance="chao") 
+Fct_Regroup_Coord_Sp_nmds(distance="bray") 
+
+#-- regroupement des coordonnees des espece plus et moins detectable
+Fct_Grp_detect_nmds(distance="chao")
+Fct_Grp_detect_nmds(distance="bray")
+
+Fct_Grp_detectD5_nmds(distance="chao")
+Fct_Grp_detectD5_nmds(distance="bray")
+
+#-- regroupement des coordonnees des espece des groupe 1 et 2
+Fct_Grp_1_2_nmds(distance="chao")
+Fct_Grp_1_2_nmds(distance="bray")
+
+#-- regroupement des coordonnees des espece des groupe A et B
+Fct_Grp_A_B_nmds(distance="chao")
+Fct_Grp_A_B_nmds(distance="bray")  
+
+#------------------------------

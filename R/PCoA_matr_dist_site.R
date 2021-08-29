@@ -107,7 +107,7 @@ fct_pcoa_site<-function(analyse="ACP",fichier="D4_C3_05") {   # sur ACP de base 
   
   #-- les sauvegardes
   #-- les chemins de sauvegardes
-  saveData<-file.path("Outcome","out-simul",analyse,paste(analyse,"_pcoa_matr_dist_site_sp",fichier,".Rdata",sep=""))
+  saveData<-file.path("Outcome","out-simul",PCoA,paste("PCoA_matr_dist_site_sp_",fichier,".Rdata",sep=""))
   
   save(A_Coord_pcoa_chao_Site,A_Coord_pcoa_chao_Site_Naive,
        A_Coord_pcoa_chao_Sp,A_Coord_pcoa_chao_Sp_Naive,

@@ -65,7 +65,7 @@ fct_pcoa_site<-function(analyse="ACP", # sur simul faite pour ACP
       try(pcoa_Naive<-cmdscale(d=M_DistSite_Naive,k=2,add = TRUE))}
     
     #-- recup des coord des pts sites dans le premier plan
-    if (is.null(Pcoa)==FALSE){
+    if (is.null(pcoa)==FALSE){
       A_Coord_pcoa_Site[,,zz]<-pcoa$points[1:Nplot,1:2]
       A_Coord_pcoa_Site_Naive[,,zz]<-pcoa_Naive$points[1:Nplot,1:2]
     } else {

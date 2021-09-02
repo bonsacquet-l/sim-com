@@ -27,7 +27,7 @@ Fct_Regroup_Coord_Sp_pcoa<-function(distance="chao") {
   #-- appel des resultats et mise en matrice par une boucle
   for (i in V_Nom_Fichier) {
     #-- chargement
-    load(file.path("Outcome","out-simul","PCoA",paste("PCoA_dist_",distance,"_",fichier,".Rdata",sep="")))
+    load(file.path("Outcome","out-simul","PCoA",paste("PCoA_dist_",distance,"_",i,".Rdata",sep="")))
     
     #-- stockage
     M_Resultat_Coord_Sp_pcoa_axe1[,i]<-as.vector(A_Coord_pcoa_Sp[,1,])

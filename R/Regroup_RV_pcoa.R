@@ -16,7 +16,7 @@ Fct_Regroup_RV_pcoa<-function(Site_Sp="Site",distance="chao") {
   #-- appel des resultats et mise en matrice par une boucle
   for (i in V_Nom_Fichier) {
     #-- chargement
-    load(file.path("Outcome","out-simul","PCoA",paste("PCoA","_RV_",Site_Sp,"_",distance,"_",fichier,".Rdata",sep="")))
+    load(file.path("Outcome","out-simul","PCoA",paste("PCoA","_RV_",Site_Sp,"_",distance,"_",i,".Rdata",sep="")))
     
     #-- stockage
     M_Resultat_RV_pcoa[,i]<-M_RV_Dist_

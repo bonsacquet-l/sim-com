@@ -60,11 +60,13 @@ Fct_RV_pcoa<-function(distance="chao",
   saveData1<-file.path("Outcome","out-simul","PCoA",paste("PCoA","_RV_Sp_",distance,"_",fichier,".Rdata",sep=""))
   saveData2<-file.path("Outcome","out-simul","PCoA",paste("PCoA","_RV_Site_",distance,"_",fichier,".Rdata",sep=""))
   
-  save(M_RV_Dist_Sp,
+  M_RV_Dist_<-M_RV_Dist_Sp
+  save(M_RV_Dist_,
        list = c("M_RV_Dist_"),
        file = saveData1)
   
-  save(M_RV_Dist_Site,
+  M_RV_Dist_<-M_RV_Dist_Site
+  save(M_RV_Dist_,
        list = c("M_RV_Dist_"),
        file = saveData2)
   

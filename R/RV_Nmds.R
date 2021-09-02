@@ -60,10 +60,12 @@ Fct_RV_nmds<-function(distance="chao",
   saveData1<-file.path("Outcome","out-simul","nMDS",paste("nMDS","_RV_Sp_",distance,"_",fichier,".Rdata",sep=""))
   saveData2<-file.path("Outcome","out-simul","nMDS",paste("nMDS","_RV_Site_",distance,"_",fichier,".Rdata",sep=""))
   
+  M_RV_Dist_<-M_RV_Dist_Sp
   save(M_RV_Dist_Sp,
        list = c("M_RV_Dist_"),
        file = saveData1)
   
+  M_RV_Dist_<-M_RV_Dist_Site
   save(M_RV_Dist_Site,
        list = c("M_RV_Dist_"),
        file = saveData2)

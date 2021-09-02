@@ -30,6 +30,9 @@ fct_pcoa_site<-function(analyse="ACP", # sur simul faite pour ACP
   A_Coord_pcoa_Sp<-array(data = NA, dim = c(Nsp,2,Nsimul))
   A_Coord_pcoa_Sp_Naive<-array(data = NA, dim = c(Nsp,2,Nsimul))
   
+  A_Coord_pcoa_Site_TEST<-array(data = NA, dim = c(Nplot,2,Nsimul))
+  A_Coord_pcoa_Site_Naive_TEST<-array(data = NA, dim = c(Nplot,2,Nsimul))
+  
   #-- une boucle pour recuperer les resultats des 1000 simulations du fichier
   for (zz in 1:Nsimul) {
     #-- initialisation de la boucle
@@ -60,14 +63,18 @@ fct_pcoa_site<-function(analyse="ACP", # sur simul faite pour ACP
     #M_DistSite_Naive_bray<-quasieuclid(M_DistSite_Naive_bray)
     
     #-- le PCoA sur les matrices de distance avec cmdscale de vegan
-    if (is.null(M_DistSite)==FALSE & is.null(M_DistSite_Naive)==FALSE){
-      if (max(M_DistSite)!=0 & max(M_DistSite_Naive)!=0){            # si que des distances nulle, PCoA impossible
-      try(pcoa<-cmdscale(d=M_DistSite,k=2,add = TRUE),silent=FALSE)
-      try(pcoa_Naive<-cmdscale(d=M_DistSite_Naive,k=2,add = TRUE),silent = FALSE)}
+    if (is.null(M_DistSite)==FALSE){
+      if (max(M_DistSite)!=0) {
+        try(pcoa<-cmdscale(d=M_DistSite,k=2,add = TRUE),silent=FALSE)}
+    } 
+    
+    if (is.null(M_DistSite_Naive)==FALSE){
+      if(max(M_DistSite_Naive)!=0){            # si que des distances nulle, PCoA impossible
+        try(pcoa_Naive<-cmdscale(d=M_DistSite_Naive,k=2,add = TRUE),silent = FALSE)}
     }
     
     #-- recup des coord des pts sites dans le premier plan
-    if (is.null(pcoa)==FALSE){
+    if (is.null(pcoa)==FALSE & is.null(pcoa_Naive)==FALSE){
       A_Coord_pcoa_Site[,,zz]<-pcoa$points[1:Nplot,1:2]
       A_Coord_pcoa_Site_Naive[,,zz]<-pcoa_Naive$points[1:Nplot,1:2]
     } else {
@@ -75,9 +82,23 @@ fct_pcoa_site<-function(analyse="ACP", # sur simul faite pour ACP
       A_Coord_pcoa_Site_Naive[,,zz]<-NA
     }
     
+    #-- recup des coord valide des pcoa et des pcoa_naive independament (sans
+    # tenir compte du fait que l'autre est mauvais) pour test
+    if (is.null(pcoa)==FALSE) {
+      A_Coord_pcoa_Site_TEST[,,zz]<-pcoa$points[1:Nplot,1:2]
+    } else {
+      A_Coord_pcoa_Site_TEST[,,zz]<-NA
+    }
+    
+    if (is.null(pcoa_Naive)==FALSE){
+      A_Coord_pcoa_Site_Naive_TEST[,,zz]<-pcoa_Naive$points[1:Nplot,1:2]
+    } else {
+      A_Coord_pcoa_Site_Naive_TEST[,,zz]<-NA
+    }
+    
     #-- recup des coord des sp avec wascore de vegan
     if (distance=="chao"){
-      if (is.null(pcoa)==FALSE){
+      if (is.null(pcoa)==FALSE & is.null(pcoa_Naive)==FALSE){
         A_Coord_pcoa_Sp[,,zz]<-wascores(pcoa$points[1:Nplot,1:2],A_MemAbon[,,zz])
         A_Coord_pcoa_Sp_Naive[,,zz]<-wascores(pcoa_Naive$points[1:Nplot,1:2],A_MemAbon_Naive[,,zz])
       } else {
@@ -87,7 +108,7 @@ fct_pcoa_site<-function(analyse="ACP", # sur simul faite pour ACP
     }
     
     if (distance=="bray"){
-      if (is.null(pcoa)==FALSE){
+      if (is.null(pcoa)==FALSE & is.null(pcoa_Naive)==FALSE){
         A_Coord_pcoa_Sp[,,zz]<-wascores(pcoa$points[1:Nplot,1:2],M_MemAbonSqrt)
         A_Coord_pcoa_Sp_Naive[,,zz]<-wascores(pcoa_Naive$points[1:Nplot,1:2],M_MemAbonSqrt_Naive)
       } else {
@@ -104,9 +125,11 @@ fct_pcoa_site<-function(analyse="ACP", # sur simul faite pour ACP
   save(Nsimul,Nplot,Nsp,
        A_Coord_pcoa_Site,A_Coord_pcoa_Site_Naive,
        A_Coord_pcoa_Sp,A_Coord_pcoa_Sp_Naive,
+       A_Coord_pcoa_Site_TEST,A_Coord_pcoa_Site_Naive_TEST,
        list = c("Nsimul","Nplot","Nsp",
                 "A_Coord_pcoa_Site","A_Coord_pcoa_Site_Naive",
-                "A_Coord_pcoa_Sp","A_Coord_pcoa_Sp_Naive"),
+                "A_Coord_pcoa_Sp","A_Coord_pcoa_Sp_Naive",
+                "A_Coord_pcoa_Site_TEST","A_Coord_pcoa_Site_Naive_TEST"),
        file = saveData)
   
 }

@@ -25,11 +25,14 @@ fct_nmds_site<-function(analyse="AFC", # sur simul faite pour ACP
   Nsp<-dim(A_MemAbon)[2]
   
   #-- creation des array pour sauvegarder les infos
-  A_Coord_nmds_com_Site<-array(data = NA, dim = c(Nplot,2,Nsimul))
-  A_Coord_nmds_com_Site_Naive<-array(data = NA, dim = c(Nplot,2,Nsimul))
+  A_Coord_nmds_Site<-array(data = NA, dim = c(Nplot,2,Nsimul))
+  A_Coord_nmds_Site_Naive<-array(data = NA, dim = c(Nplot,2,Nsimul))
   
-  A_Coord_nmds_com_Sp<-array(data = NA, dim = c(Nsp,2,Nsimul))
-  A_Coord_nmds_com_Sp_Naive<-array(data = NA, dim = c(Nsp,2,Nsimul))
+  A_Coord_nmds_Sp<-array(data = NA, dim = c(Nsp,2,Nsimul))
+  A_Coord_nmds_Sp_Naive<-array(data = NA, dim = c(Nsp,2,Nsimul))
+  
+  A_Coord_nmds_Site_TEST<-array(data = NA, dim = c(Nplot,2,Nsimul))
+  A_Coord_nmds_Site_Naive_TEST<-array(data = NA, dim = c(Nplot,2,Nsimul))
   
   #-- une boucle pour recuperer les resultats des 1000 simulations du fichier
   for (zz in 1:Nsimul) {
@@ -87,15 +90,18 @@ fct_nmds_site<-function(analyse="AFC", # sur simul faite pour ACP
     }
     
     #-- recup des coord des pts sites dans le premier plan
-    if (is.null(Nmds_Abon)==FALSE){
-      A_Coord_nmds_Site[,,zz]<-Nmds_Abon$points[1:Nplot,1:2]}
-    if (is.null(Nmds_Abon_Naive)==FALSE){
+    if (is.null(Nmds_Abon)==FALSE & is.null(Nmds_Abon_Naive)==FALSE){
+      A_Coord_nmds_Site[,,zz]<-Nmds_Abon$points[1:Nplot,1:2]
       A_Coord_nmds_Site_Naive[,,zz]<-Nmds_Abon_Naive$points[1:Nplot,1:2]}
     
-    #-- recup des coord des pts sp dans le premier plan
     if (is.null(Nmds_Abon)==FALSE){
-      A_Coord_nmds_Sp[,,zz]<-Nmds_Abon$species[1:Nsp,1:2]}
+      A_Coord_nmds_Site_TEST[,,zz]<-Nmds_Abon$points[1:Nplot,1:2]}
     if (is.null(Nmds_Abon_Naive)==FALSE){
+      A_Coord_nmds_Site_Naive_TEST[,,zz]<-Nmds_Abon_Naive$points[1:Nplot,1:2]}
+    
+    #-- recup des coord des pts sp dans le premier plan
+    if (is.null(Nmds_Abon)==FALSE & is.null(Nmds_Abon_Naive)==FALSE){
+      A_Coord_nmds_Sp[,,zz]<-Nmds_Abon$species[1:Nsp,1:2]
       A_Coord_nmds_Sp_Naive[,,zz]<-Nmds_Abon_Naive$species[1:Nsp,1:2]}
     
   }
@@ -107,9 +113,11 @@ fct_nmds_site<-function(analyse="AFC", # sur simul faite pour ACP
   save(Nsimul,Nplot,Nsp,
        A_Coord_nmds_Site,A_Coord_nmds_Site_Naive,
        A_Coord_nmds_Sp,A_Coord_nmds_Sp_Naive,
+       A_Coord_nmds_Site_TEST,A_Coord_nmds_Site_Naive_TEST,
        list = c("Nsimul","Nplot","Nsp",
                 "A_Coord_nmds_Site","A_Coord_nmds_Site_Naive",
-                "A_Coord_nmds_Sp","A_Coord_nmds_Sp_Naive"),
+                "A_Coord_nmds_Sp","A_Coord_nmds_Sp_Naive",
+                "A_Coord_nmds_Site_TEST","A_Coord_nmds_Site_Naive_TEST"),
        file = saveData)
   
 }  

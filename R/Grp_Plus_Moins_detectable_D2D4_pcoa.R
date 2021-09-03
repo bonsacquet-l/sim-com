@@ -33,7 +33,7 @@ Fct_Grp_detect_pcoa<-function(distance="chao") {
     print(n)
     
     i<-0
-    
+      
     while (i<=999) {
       Sp_les_Plus_Detect<-c((6+i*20),(7+i*20),(8+i*20),(9+i*20),(10+i*20),(11+i*20),(12+i*20),
                             (19+i*20),(20+i*20))
@@ -42,21 +42,25 @@ Fct_Grp_detect_pcoa<-function(distance="chao") {
       lignes<-(c((11*i+1):(11*i+11)))
       
       #-- repartition des coordonnees des especes dans le deux groupes
+      a<-NA
       ifelse(median(M_Resultat_Coord_Sp_pcoa_axe1[Sp_les_Moins_Detect,n])<0,a<-(-1),a<-1)
       M_Grp_Detect_Axe1_pcoa[(lignes),paste(n,"_PlusD",sep="")]<-c(M_Resultat_Coord_Sp_pcoa_axe1[Sp_les_Plus_Detect,n]*a,
                                                                   rep(median(M_Resultat_Coord_Sp_pcoa_axe1[Sp_les_Plus_Detect,n])*a,2))
       M_Grp_Detect_Axe1_pcoa[(lignes),paste(n,"_MoinsD",sep="")]<-M_Resultat_Coord_Sp_pcoa_axe1[Sp_les_Moins_Detect,n]*a
       
+      a<-NA
       ifelse(median(M_Resultat_Coord_Sp_pcoa_Naive_axe1[Sp_les_Moins_Detect,n])<0,a<-(-1),a<-1) 
       M_Grp_Detect_Axe1_pcoa_Naive[(lignes),paste(n,"_PlusD",sep="")]<-c(M_Resultat_Coord_Sp_pcoa_Naive_axe1[Sp_les_Plus_Detect,n]*a,
                                                                         rep(median(M_Resultat_Coord_Sp_pcoa_Naive_axe1[Sp_les_Plus_Detect,n])*a,2))
       M_Grp_Detect_Axe1_pcoa_Naive[(lignes),paste(n,"_MoinsD",sep="")]<-M_Resultat_Coord_Sp_pcoa_Naive_axe1[Sp_les_Moins_Detect,n]*a
       
+      a<-NA
       ifelse(median(M_Resultat_Coord_Sp_pcoa_axe2[Sp_les_Moins_Detect,n])<0,a<-(-1),a<-1)    
       M_Grp_Detect_Axe2_pcoa[(lignes),paste(n,"_PlusD",sep="")]<-c(M_Resultat_Coord_Sp_pcoa_axe2[Sp_les_Plus_Detect,n]*a,
                                                                   rep(median(M_Resultat_Coord_Sp_pcoa_axe2[Sp_les_Plus_Detect,n])*a,2))
       M_Grp_Detect_Axe2_pcoa[(lignes),paste(n,"_MoinsD",sep="")]<-M_Resultat_Coord_Sp_pcoa_axe2[Sp_les_Moins_Detect,n]*a
       
+      a<-NA
       ifelse(median(M_Resultat_Coord_Sp_pcoa_Naive_axe2[Sp_les_Moins_Detect,n])<0,a<-(-1),a<-1)   
       M_Grp_Detect_Axe2_pcoa_Naive[lignes,paste(n,"_PlusD",sep="")]<-c(M_Resultat_Coord_Sp_pcoa_Naive_axe2[Sp_les_Plus_Detect,n]*a,
                                                                       rep(median(M_Resultat_Coord_Sp_pcoa_Naive_axe2[Sp_les_Plus_Detect,n])*a,2))

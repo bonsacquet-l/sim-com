@@ -42,21 +42,25 @@ Fct_Grp_detect_nmds<-function(distance="chao") {
       lignes<-(c((11*i+1):(11*i+11)))
       
       #-- repartition des coordonnees des especes dans le deux groupes
+      a<-NA
       ifelse(median(M_Resultat_Coord_Sp_nmds_axe1[Sp_les_Moins_Detect,n])<0,a<-(-1),a<-1)
       M_Grp_Detect_Axe1_nmds[(lignes),paste(n,"_PlusD",sep="")]<-c(M_Resultat_Coord_Sp_nmds_axe1[Sp_les_Plus_Detect,n]*a,
                                                                    rep(median(M_Resultat_Coord_Sp_nmds_axe1[Sp_les_Plus_Detect,n])*a,2))
       M_Grp_Detect_Axe1_nmds[(lignes),paste(n,"_MoinsD",sep="")]<-M_Resultat_Coord_Sp_nmds_axe1[Sp_les_Moins_Detect,n]*a
       
+      a<-NA
       ifelse(median(M_Resultat_Coord_Sp_nmds_Naive_axe1[Sp_les_Moins_Detect,n])<0,a<-(-1),a<-1) 
       M_Grp_Detect_Axe1_nmds_Naive[(lignes),paste(n,"_PlusD",sep="")]<-c(M_Resultat_Coord_Sp_nmds_Naive_axe1[Sp_les_Plus_Detect,n]*a,
                                                                          rep(median(M_Resultat_Coord_Sp_nmds_Naive_axe1[Sp_les_Plus_Detect,n])*a,2))
       M_Grp_Detect_Axe1_nmds_Naive[(lignes),paste(n,"_MoinsD",sep="")]<-M_Resultat_Coord_Sp_nmds_Naive_axe1[Sp_les_Moins_Detect,n]*a
       
+      a<-NA
       ifelse(median(M_Resultat_Coord_Sp_nmds_axe2[Sp_les_Moins_Detect,n])<0,a<-(-1),a<-1)    
       M_Grp_Detect_Axe2_nmds[(lignes),paste(n,"_PlusD",sep="")]<-c(M_Resultat_Coord_Sp_nmds_axe2[Sp_les_Plus_Detect,n]*a,
                                                                    rep(median(M_Resultat_Coord_Sp_nmds_axe2[Sp_les_Plus_Detect,n])*a,2))
       M_Grp_Detect_Axe2_nmds[(lignes),paste(n,"_MoinsD",sep="")]<-M_Resultat_Coord_Sp_nmds_axe2[Sp_les_Moins_Detect,n]*a
       
+      a<-NA
       ifelse(median(M_Resultat_Coord_Sp_nmds_Naive_axe2[Sp_les_Moins_Detect,n])<0,a<-(-1),a<-1)   
       M_Grp_Detect_Axe2_nmds_Naive[lignes,paste(n,"_PlusD",sep="")]<-c(M_Resultat_Coord_Sp_nmds_Naive_axe2[Sp_les_Plus_Detect,n]*a,
                                                                        rep(median(M_Resultat_Coord_Sp_nmds_Naive_axe2[Sp_les_Plus_Detect,n])*a,2))

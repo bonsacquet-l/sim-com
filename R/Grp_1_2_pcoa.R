@@ -46,18 +46,22 @@ Fct_Grp_1_2_pcoa<-function(distance="chao") {
       lignes<-(c((10*i+1):(10*i+10)))
       
       #-- repartition des coordonnees des especes dans le deux groupes
+      a<-NA
       ifelse(median(M_Resultat_Coord_Sp_pcoa_axe1[Sp_Grp_2,n])<0,a<-(-1),a<-1)
       M_Grp_1_2_Axe1_pcoa[(lignes),paste(n,"_G1",sep="")]<-M_Resultat_Coord_Sp_pcoa_axe1[Sp_Grp_1,n]*a
       M_Grp_1_2_Axe1_pcoa[(lignes),paste(n,"_G2",sep="")]<-M_Resultat_Coord_Sp_pcoa_axe1[Sp_Grp_2,n]*a
-      
+
+      a<-NA
       ifelse(median(M_Resultat_Coord_Sp_pcoa_Naive_axe1[Sp_Grp_2,n])<0,a<-(-1),a<-1) 
       M_Grp_1_2_Axe1_pcoa_Naive[(lignes),paste(n,"_G1",sep="")]<-M_Resultat_Coord_Sp_pcoa_Naive_axe1[Sp_Grp_1,n]*a
       M_Grp_1_2_Axe1_pcoa_Naive[(lignes),paste(n,"_G2",sep="")]<-M_Resultat_Coord_Sp_pcoa_Naive_axe1[Sp_Grp_2,n]*a
       
+      a<-NA
       ifelse(median(M_Resultat_Coord_Sp_pcoa_axe2[Sp_Grp_2,n])<0,a<-(-1),a<-1)    
       M_Grp_1_2_Axe2_pcoa[(lignes),paste(n,"_G1",sep="")]<-M_Resultat_Coord_Sp_pcoa_axe2[Sp_Grp_1,n]*a
       M_Grp_1_2_Axe2_pcoa[(lignes),paste(n,"_G2",sep="")]<-M_Resultat_Coord_Sp_pcoa_axe2[Sp_Grp_2,n]*a
       
+      a<-NA
       ifelse(median(M_Resultat_Coord_Sp_pcoa_Naive_axe2[Sp_Grp_2,n])<0,a<-(-1),a<-1)   
       M_Grp_1_2_Axe2_pcoa_Naive[lignes,paste(n,"_G1",sep="")]<-M_Resultat_Coord_Sp_pcoa_Naive_axe2[Sp_Grp_1,n]*a
       M_Grp_1_2_Axe2_pcoa_Naive[lignes,paste(n,"_G2",sep="")]<-M_Resultat_Coord_Sp_pcoa_Naive_axe2[Sp_Grp_2,n]*a

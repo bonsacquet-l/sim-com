@@ -24,6 +24,15 @@ Fct_Regroup_Coord_Sp_pcoa<-function(distance="chao") {
   M_Resultat_Coord_Sp_pcoa_Naive_axe2<-matrix(NA,nrow = 20000,ncol = Nbr_Fichier) # coord des sp sur axe 2
   colnames(M_Resultat_Coord_Sp_pcoa_Naive_axe2)<-as.character(V_Nom_Fichier)     # dans pcoa_Naive
   
+  M_Resultat_Coord_Site_pcoa_axe1<-matrix(NA,nrow = 50000,ncol = Nbr_Fichier)  # coord des sites sur axe 1
+  colnames(M_Resultat_Coord_Site_pcoa_axe1)<-as.character(V_Nom_Fichier)      # dans pcoa
+
+  M_Resultat_Coord_Site_pcoa_TEST_axe1<-matrix(NA,nrow = 50000,ncol = Nbr_Fichier)  # coord des sites sur axe 1
+  colnames(M_Resultat_Coord_Site_pcoa_TEST_axe1)<-as.character(V_Nom_Fichier)      # dans pcoa
+  
+  M_Resultat_Coord_Site_pcoa_TEST_Naive_axe1<-matrix(NA,nrow = 50000,ncol = Nbr_Fichier) # coord des sites sur axe 1
+  colnames(M_Resultat_Coord_Site_pcoa_TEST_Naive_axe1)<-as.character(V_Nom_Fichier)     # dans pcoa_Naive
+  
   #-- appel des resultats et mise en matrice par une boucle
   for (i in V_Nom_Fichier) {
     #-- chargement
@@ -35,13 +44,21 @@ Fct_Regroup_Coord_Sp_pcoa<-function(distance="chao") {
     M_Resultat_Coord_Sp_pcoa_Naive_axe1[,i]<-as.vector(A_Coord_pcoa_Sp_Naive[,1,])
     M_Resultat_Coord_Sp_pcoa_Naive_axe2[,i]<-as.vector(A_Coord_pcoa_Sp_Naive[,2,])
     
+    M_Resultat_Coord_Site_pcoa_axe1[,i]<-as.vector(A_Coord_pcoa_Site[,1,])
+    M_Resultat_Coord_Site_pcoa_TEST_axe1[,i]<-as.vector(A_Coord_pcoa_Site_TEST[,1,])
+    M_Resultat_Coord_Site_pcoa_TEST_Naive_axe1[,i]<-as.vector(A_Coord_pcoa_Site_Naive_TEST[,1,])
+    
     #-- sauvegarde
     saveData<-file.path("Outcome","out-regroupement","PCoA",paste("PCoA_Regroup_Coord_Sp_",distance,".Rdata",sep = ""))
     
     save(M_Resultat_Coord_Sp_pcoa_axe1,M_Resultat_Coord_Sp_pcoa_axe2,
          M_Resultat_Coord_Sp_pcoa_Naive_axe1,M_Resultat_Coord_Sp_pcoa_Naive_axe2,
+         M_Resultat_Coord_Site_pcoa_axe1,M_Resultat_Coord_Site_pcoa_TEST_axe1,
+         M_Resultat_Coord_Site_pcoa_TEST_Naive_axe1,
          list = c("M_Resultat_Coord_Sp_pcoa_axe1","M_Resultat_Coord_Sp_pcoa_axe2",
-                  "M_Resultat_Coord_Sp_pcoa_Naive_axe1","M_Resultat_Coord_Sp_pcoa_Naive_axe2"),
+                  "M_Resultat_Coord_Sp_pcoa_Naive_axe1","M_Resultat_Coord_Sp_pcoa_Naive_axe2",
+                  "M_Resultat_Coord_Site_pcoa_axe1","M_Resultat_Coord_Site_pcoa_TEST_axe1",
+                  "M_Resultat_Coord_Site_pcoa_TEST_Naive_axe1"),
          file = saveData)
   }
 }

@@ -24,6 +24,15 @@ Fct_Regroup_Coord_Sp_nmds<-function(distance="chao") {
   M_Resultat_Coord_Sp_nmds_Naive_axe2<-matrix(NA,nrow = 20000,ncol = Nbr_Fichier) # coord des sp sur axe 2
   colnames(M_Resultat_Coord_Sp_nmds_Naive_axe2)<-as.character(V_Nom_Fichier)     # dans nmds_Naive
   
+  M_Resultat_Coord_Site_nmds_axe1<-matrix(NA,nrow = 100000,ncol = Nbr_Fichier)  # coord des sites sur axe 1
+  colnames(M_Resultat_Coord_Site_nmds_axe1)<-as.character(V_Nom_Fichier)      # dans pcoa
+  
+  M_Resultat_Coord_Site_nmds_TEST_axe1<-matrix(NA,nrow = 100000,ncol = Nbr_Fichier)  # coord des sites sur axe 1
+  colnames(M_Resultat_Coord_Site_nmds_TEST_axe1)<-as.character(V_Nom_Fichier)      # dans pcoa
+  
+  M_Resultat_Coord_Site_nmds_TEST_Naive_axe1<-matrix(NA,nrow = 100000,ncol = Nbr_Fichier) # coord des sites sur axe 1
+  colnames(M_Resultat_Coord_Site_nmds_TEST_Naive_axe1)<-as.character(V_Nom_Fichier)     # dans pcoa_Naive
+  
   #-- appel des resultats et mise en matrice par une boucle
   for (i in V_Nom_Fichier) {
     #-- chargement
@@ -35,13 +44,21 @@ Fct_Regroup_Coord_Sp_nmds<-function(distance="chao") {
     M_Resultat_Coord_Sp_nmds_Naive_axe1[,i]<-as.vector(A_Coord_nmds_Sp_Naive[,1,])
     M_Resultat_Coord_Sp_nmds_Naive_axe2[,i]<-as.vector(A_Coord_nmds_Sp_Naive[,2,])
     
+    M_Resultat_Coord_Site_nmds_axe1[,i]<-as.vector(A_Coord_nmds_Site[,1,])
+    M_Resultat_Coord_Site_nmds_TEST_axe1[,i]<-as.vector(A_Coord_nmds_Site_TEST[,1,])
+    M_Resultat_Coord_Site_nmds_TEST_Naive_axe1[,i]<-as.vector(A_Coord_nmds_Site_Naive_TEST[,1,])
+    
     #-- sauvegarde
     saveData<-file.path("Outcome","out-regroupement","nMDS",paste("nMDS_Regroup_Coord_Sp_",distance,".Rdata",sep = ""))
     
     save(M_Resultat_Coord_Sp_nmds_axe1,M_Resultat_Coord_Sp_nmds_axe2,
          M_Resultat_Coord_Sp_nmds_Naive_axe1,M_Resultat_Coord_Sp_nmds_Naive_axe2,
+         M_Resultat_Coord_Site_nmds_axe1,M_Resultat_Coord_Site_nmds_TEST_axe1,
+         M_Resultat_Coord_Site_nmds_TEST_Naive_axe1,
          list = c("M_Resultat_Coord_Sp_nmds_axe1","M_Resultat_Coord_Sp_nmds_axe2",
-                  "M_Resultat_Coord_Sp_nmds_Naive_axe1","M_Resultat_Coord_Sp_nmds_Naive_axe2"),
+                  "M_Resultat_Coord_Sp_nmds_Naive_axe1","M_Resultat_Coord_Sp_nmds_Naive_axe2",
+                  "M_Resultat_Coord_Site_nmds_axe1","M_Resultat_Coord_Site_nmds_TEST_axe1",
+                  "M_Resultat_Coord_Site_nmds_TEST_Naive_axe1"),
          file = saveData)
   }
 }

@@ -71,11 +71,12 @@ fct_tab_bad_simul<-function(fichier=V_Nom_Fichier)
   
   #-- sauvegarde
   saveData<-file.path("Outcome","out-regroupement",paste("Good_simul_all.Rdata",sep = ""))
-  
-  save(M_Resultat_Coord_Sp_pcoa_axe1,M_Resultat_Coord_Sp_pcoa_axe2,
-       M_Resultat_Coord_Sp_pcoa_Naive_axe1,M_Resultat_Coord_Sp_pcoa_Naive_axe2,
-       list = c("M_Resultat_Coord_Sp_pcoa_axe1","M_Resultat_Coord_Sp_pcoa_axe2",
-                "M_Resultat_Coord_Sp_pcoa_Naive_axe1","M_Resultat_Coord_Sp_pcoa_Naive_axe2"),
+  saveDataCsv<-file.path("Outcome","out-regroupement",paste("Good_simul_all.csv",sep = ""))
+    
+  save(M_good_simul_coord,
+       list = c("M_good_simul_coord"),
        file = saveData)
   
+  write.csv2(M_good_simul_coord,
+             file = saveDataCsv)
 }

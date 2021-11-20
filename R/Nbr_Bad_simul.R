@@ -22,12 +22,12 @@ fct_tab_bad_simul<-function(fichier=V_Nom_Fichier)
   load(file.path("Outcome","out-regroupement","ACP","ACP_Regroup_Coord_Sp.Rdata"))
   load(file.path("Outcome","out-regroupement","AFC","AFC_Regroup_Coord_Sp.Rdata"))
   load(file.path("Outcome","out-regroupement","PCoA","PCoA_Regroup_Coord_Sp_bray.Rdata"))
-  #load(file.path("Outcome","out-regroupement","nMDS","nMDS_Regroup_Coord_Sp_bray.Rdata"))
+  load(file.path("Outcome","out-regroupement","nMDS","nMDS_Regroup_Coord_Sp_bray.Rdata"))
   
   load(file.path("Outcome","out-regroupement","ACP","ACP_Regroup_RV_Sp.Rdata"))
   load(file.path("Outcome","out-regroupement","AFC","AFC_Regroup_RV_Sp.Rdata"))
   load(file.path("Outcome","out-regroupement","PCoA","PCoA_Regroup_RV_Sp_bray.Rdata"))
-  #load(file.path("Outcome","out-regroupement","nMDS","nMDS_Regroup_RV_Sp_bray.Rdata"))
+  load(file.path("Outcome","out-regroupement","nMDS","nMDS_Regroup_RV_Sp_bray.Rdata"))
   
   #-- remplissage premiere partie du tableau
   for (i in fichier){
@@ -42,18 +42,18 @@ fct_tab_bad_simul<-function(fichier=V_Nom_Fichier)
     M_good_simul_coord[i,"PCoA_Bray_site_naive"]<-1000-length(which(is.na(M_Resultat_Coord_Site_pcoa_TEST_Naive_axe1[,i])))/50
     M_good_simul_coord[i,"PCoA_Bray_RV"]<-1000-length(which(is.na(M_Resultat_RV_pcoa[,i])))
     
-    #M_good_simul_coord[i,"nMDS_Bray_sp"]<-1000-length(which(is.na(M_Resultat_Coord_Sp_nmds_axe1[,i])))/20
-    #M_good_simul_coord[i,"nMDS_Bray_site"]<-1000-length(which(is.na(M_Resultat_Coord_Site_nmds_TEST_axe1[,i])))/100
-    #M_good_simul_coord[i,"nMDS_Bray_site_naive"]<-1000-length(which(is.na(M_Resultat_Coord_Site_nmds_TEST_Naive_axe1[,i])))/100
-    #M_good_simul_coord[i,"nMDS_Bray_RV"]<-1000-length(which(is.na(M_Resultat_RV_nmds[,i])))
+    M_good_simul_coord[i,"nMDS_Bray_sp"]<-1000-length(which(is.na(M_Resultat_Coord_Sp_nmds_axe1[,i])))/20
+    M_good_simul_coord[i,"nMDS_Bray_site"]<-1000-length(which(is.na(M_Resultat_Coord_Site_nmds_TEST_axe1[,i])))/100
+    M_good_simul_coord[i,"nMDS_Bray_site_naive"]<-1000-length(which(is.na(M_Resultat_Coord_Site_nmds_TEST_Naive_axe1[,i])))/100
+    M_good_simul_coord[i,"nMDS_Bray_RV"]<-1000-length(which(is.na(M_Resultat_RV_nmds[,i])))
   }
   
   #-- chargement des donnees utiles suite
   load(file.path("Outcome","out-regroupement","PCoA","PCoA_Regroup_Coord_Sp_chao.Rdata"))
-  #load(file.path("Outcome","out-regroupement","nMDS","nMDS_Regroup_Coord_Sp_chao.Rdata"))
+  load(file.path("Outcome","out-regroupement","nMDS","nMDS_Regroup_Coord_Sp_chao.Rdata"))
   
   load(file.path("Outcome","out-regroupement","PCoA","PCoA_Regroup_RV_Sp_chao.Rdata"))
-  #load(file.path("Outcome","out-regroupement","nMDS","nMDS_Regroup_RV_Sp_chao.Rdata"))
+  load(file.path("Outcome","out-regroupement","nMDS","nMDS_Regroup_RV_Sp_chao.Rdata"))
   
   #-- remplissage premiere partie du tableau
   for (i in fichier){
@@ -63,10 +63,10 @@ fct_tab_bad_simul<-function(fichier=V_Nom_Fichier)
     M_good_simul_coord[i,"PCoA_Chao_site_naive"]<-1000-length(which(is.na(M_Resultat_Coord_Site_pcoa_TEST_Naive_axe1[,i])))/50
     M_good_simul_coord[i,"PCoA_Chao_RV"]<-1000-length(which(is.na(M_Resultat_RV_pcoa[,i])))
     
-    #M_good_simul_coord[i,"nMDS_Chao_sp"]<-1000-length(which(is.na(M_Resultat_Coord_Sp_nmds_axe1[,i])))/20
-    #M_good_simul_coord[i,"nMDS_Chao_site"]<-1000-length(which(is.na(M_Resultat_Coord_Site_nmds_TEST_axe1[,i])))/100
-    #M_good_simul_coord[i,"nMDS_Chao_site_naive"]<-1000-length(which(is.na(M_Resultat_Coord_Site_nmds_TEST_Naive_axe1[,i])))/100
-    #M_good_simul_coord[i,"nMDS_Chao_RV"]<-1000-length(which(is.na(M_Resultat_RV_nmds[,i])))
+    M_good_simul_coord[i,"nMDS_Chao_sp"]<-1000-length(which(is.na(M_Resultat_Coord_Sp_nmds_axe1[,i])))/20
+    M_good_simul_coord[i,"nMDS_Chao_site"]<-1000-length(which(is.na(M_Resultat_Coord_Site_nmds_TEST_axe1[,i])))/100
+    M_good_simul_coord[i,"nMDS_Chao_site_naive"]<-1000-length(which(is.na(M_Resultat_Coord_Site_nmds_TEST_Naive_axe1[,i])))/100
+    M_good_simul_coord[i,"nMDS_Chao_RV"]<-1000-length(which(is.na(M_Resultat_RV_nmds[,i])))
   }
   
   #-- sauvegarde

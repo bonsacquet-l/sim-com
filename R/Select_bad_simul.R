@@ -12,7 +12,7 @@ fct_select_bad_simul<-function(alpha=800) {
   #-- selection des hypothèse (simulations) ou il y a moin de alpha (800) bonnes simuls
   T_bad_simul_PCA<-as_tibble(M_good_simul_coord,rownames="Simul")%>%
                    select_at(vars(Simul,PCA,PCA_RV))%>%
-                   filter_at(vars(PCA),~.<alpha)%>%
+                   filter_at(vars(PCA),~.<alpha)
   
   T_bad_simul_CA<-as_tibble(M_good_simul_coord,rownames="Simul")%>%
     select_at(vars(Simul,CA,CA_RV))%>%
@@ -39,8 +39,8 @@ fct_select_bad_simul<-function(alpha=800) {
     filter_at(vars(nMDS_Chao_sp),~.<alpha)
   
   #-- sauvegarde des tableaux
-  saveDataPCA<-file.path("Outcome","out-regroupement","ACP","Table_bad_Simul_PCA.Rdata")
-  saveDataCA<-file.path("Outcome","out-regroupement","AFC","Table_bad_Simul_CA.Rdata")
+  saveDataPCA<-file.path("Outcome","out-regroupement","ACP","Table_bad_Simul_ACP.Rdata")
+  saveDataCA<-file.path("Outcome","out-regroupement","AFC","Table_bad_Simul_AFC.Rdata")
   saveDataPCoA_bray<-file.path("Outcome","out-regroupement","PCoA","Table_bad_Simul_PCoA_bray.Rdata")
   saveDataPCoA_chao<-file.path("Outcome","out-regroupement","PCoA","Table_bad_Simul_PCoA_chao.Rdata")
   saveDatanMDS_bray<-file.path("Outcome","out-regroupement","nMDS","Table_bad_Simul_nMDS_bray.Rdata")
@@ -69,8 +69,8 @@ fct_select_bad_simul<-function(alpha=800) {
        file = saveDatanMDS_chao)
 
   #-- enregistrement des tableau en csv
-  savePCACsv<-file.path("Outcome","out-regroupement","ACP","T_bad_simul_PCA.csv")
-  saveCACsv<-file.path("Outcome","out-regroupement","AFC","T_bad_Simul_CA.csv")
+  savePCACsv<-file.path("Outcome","out-regroupement","ACP","T_bad_simul_ACP.csv")
+  saveCACsv<-file.path("Outcome","out-regroupement","AFC","T_bad_Simul_AFC.csv")
   savePCoA_brayCsv<-file.path("Outcome","out-regroupement","PCoA","T_bad_Simul_PCoA_bray.csv")
   savePCoA_chaoCsv<-file.path("Outcome","out-regroupement","PCoA","T_bad_Simul_PCoA_chao.csv")
   savenMDS_brayCsv<-file.path("Outcome","out-regroupement","nMDS","T_bad_Simul_nMDS_bray.csv")

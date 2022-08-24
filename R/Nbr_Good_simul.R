@@ -6,7 +6,7 @@
 #--------------------------------------------------#
 source(file.path("R","Noms-Fichiers.R"))
 
-fct_tab_bad_simul<-function(fichier=V_Nom_Fichier)
+fct_tab_good_simul<-function(fichier=V_Nom_Fichier)
 {
   #-- creation des tableaux recapitulatifs
   M_good_simul_coord<-matrix(NA,ncol =20,nrow = length(fichier))

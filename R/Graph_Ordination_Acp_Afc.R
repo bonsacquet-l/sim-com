@@ -25,7 +25,7 @@ rm(list=ls())
 #-- les parametres
 analyse<-"ACP"
 fichier<-"D4_C3_05"
-fichier<-"D1_C3_01"
+#fichier<-"D1_C3_01"
 
 simul<-1000
 
@@ -59,7 +59,7 @@ G_ACP_i<-G_ACP_i+ geom_text_repel(data=DF_data_i,
                                       label=V_label),
                                   size=3)
 G_ACP_i<-G_ACP_i+ labs(x="Axis 1 of PCA_i",y="Axis 2 of PCA_i")
-G_ACP_i<-G_ACP_i+scale_color_manual(values = c("black","red"))
+G_ACP_i<-G_ACP_i+scale_color_manual(values = c("red","black"))
 
 G_ACP_i<-G_ACP_i+theme(legend.position = "none") 
 
@@ -78,7 +78,7 @@ G_ACP_n<-G_ACP_n+ geom_text_repel(data=DF_data_n,
                                       label=V_label),
                                   size=3)
 G_ACP_n<-G_ACP_n+ labs(x="Axis 1 of PCA_n",y="Axis 2 of PCA_n")
-G_ACP_n<-G_ACP_n+scale_color_manual(values = c("black","red"))
+G_ACP_n<-G_ACP_n+scale_color_manual(values = c("red","black"))
 
 
 legend<-get_legend(G_ACP_n)
@@ -105,7 +105,7 @@ rm(list=ls())
 #-- les parametres
 analyse<-"AFC"
 fichier<-"D4_C3_05"
-fichier<-"D1_C3_01"
+#fichier<-"D1_C3_01"
 
 simul<-900
 
@@ -139,7 +139,7 @@ G_AFC_i<-G_AFC_i+ geom_text_repel(data=DF_data_i,
                                       label=V_label),
                                   size=3)
 G_AFC_i<-G_AFC_i+ labs(x="Axis 1 of CA_i",y="Axis 2 of CA_i")
-G_AFC_i<-G_AFC_i+scale_color_manual(values = c("black","red"))
+G_AFC_i<-G_AFC_i+scale_color_manual(values = c("red","black"))
 
 G_AFC_i<-G_AFC_i+theme(legend.position = "none") 
 
@@ -158,7 +158,7 @@ G_AFC_n<-G_AFC_n+ geom_text_repel(data=DF_data_n,
                                       label=V_label),
                                   size=3)
 G_AFC_n<-G_AFC_n+ labs(x="Axis 1 of CA_n",y="Axis 2 of CA_n")
-G_AFC_n<-G_AFC_n+scale_color_manual(values = c("black","red"))
+G_AFC_n<-G_AFC_n+scale_color_manual(values = c("red","black"))
 
 
 legend<-get_legend(G_AFC_n)

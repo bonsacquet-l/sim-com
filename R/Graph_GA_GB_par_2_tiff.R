@@ -196,7 +196,7 @@ Fct_Graph_GA_GB_par_2_tiff<-function(Detection="D1",couleur_noir="couleur",
             cex.axis=1,
             xlab=xlab1,
             xaxt="n",lwd=0.5,cex.lab=1.5,at=espbox)
-    title(ylab="axis1, groups 1 & 2",line = 2,cex.lab=1.5, adj=0.5)
+    title(ylab="axis1, groups A & B",line = 2,cex.lab=1.5, adj=0.5)
     axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
          col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1)
     axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
@@ -216,7 +216,7 @@ Fct_Graph_GA_GB_par_2_tiff<-function(Detection="D1",couleur_noir="couleur",
             cex.axis=1,
             xlab=xlab2,
             xaxt="n",lwd=0.5,cex.lab=1.5,at=espbox)
-    title(ylab="axis1, groups 1 & 2",line = 2,cex.lab=1.5, adj=0.5)
+    title(ylab="axis1, groups A & B",line = 2,cex.lab=1.5, adj=0.5)
     axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
          col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1)
     axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
@@ -235,7 +235,7 @@ Fct_Graph_GA_GB_par_2_tiff<-function(Detection="D1",couleur_noir="couleur",
             cex.axis=1,
             xlab=xlab3,
             xaxt="n",lwd=0.5,cex.lab=1.5,at=espbox)
-    title(ylab="axis2, groups 1 & 2",line = 2,cex.lab=1.5, adj=0.5)
+    title(ylab="axis2, groups A & B",line = 2,cex.lab=1.5, adj=0.5)
     axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
          col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1)
     axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
@@ -254,7 +254,7 @@ Fct_Graph_GA_GB_par_2_tiff<-function(Detection="D1",couleur_noir="couleur",
             cex.axis=1,
             xlab=xlab4,
             xaxt="n",lwd=0.5,cex.lab=1.5,at=espbox)
-    title(ylab="axis2, groups 1 & 2",line = 2,cex.lab=1.5, adj=0.5)
+    title(ylab="axis2, groups A & B",line = 2,cex.lab=1.5, adj=0.5)
     axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
          col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1)
     axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
@@ -281,7 +281,7 @@ Fct_Graph_GA_GB_par_2_tiff<-function(Detection="D1",couleur_noir="couleur",
             cex.axis=1,
             xlab=xlab5,
             xaxt="n",lwd=0.5,cex.lab=1.5,at=espbox)
-    title(ylab="axis1, groups 1 & 2",line = 2,cex.lab=1.5, adj=0.5)
+    title(ylab="axis1, groups A & B",line = 2,cex.lab=1.5, adj=0.5)
     axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
          col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1)
     axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
@@ -301,7 +301,7 @@ Fct_Graph_GA_GB_par_2_tiff<-function(Detection="D1",couleur_noir="couleur",
             cex.axis=1,
             xlab=xlab6,
             xaxt="n",lwd=0.5,cex.lab=1.5,at=espbox)
-    title(ylab="axis1, groups 1 & 2",line = 2,cex.lab=1.5, adj=0.5)
+    title(ylab="axis1, groups A & B",line = 2,cex.lab=1.5, adj=0.5)
     axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
          col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1)
     axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
@@ -320,7 +320,7 @@ Fct_Graph_GA_GB_par_2_tiff<-function(Detection="D1",couleur_noir="couleur",
             cex.axis=1,
             xlab=xlab7,
             xaxt="n",lwd=0.5,cex.lab=1.5,at=espbox)
-    title(ylab="axis2, groups 1 & 2",line = 2,cex.lab=1.5, adj=0.5)
+    title(ylab="axis2, groups A & B",line = 2,cex.lab=1.5, adj=0.5)
     axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
          col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1)
     axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
@@ -339,7 +339,7 @@ Fct_Graph_GA_GB_par_2_tiff<-function(Detection="D1",couleur_noir="couleur",
             cex.axis=1,
             xlab=xlab8,
             xaxt="n",lwd=0.5,cex.lab=1.5,at=espbox)
-    title(ylab="axis2, groups 1 & 2",line = 2,cex.lab=1.5, adj=0.5)
+    title(ylab="axis2, groups A & B",line = 2,cex.lab=1.5, adj=0.5)
     axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
          col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1)
     axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
@@ -378,7 +378,7 @@ Fct_Graph_GA_GB_par_2_tiff<-function(Detection="D1",couleur_noir="couleur",
             cex.axis=1,
             xlab=xlab1,
             xaxt="n",lwd=0.5,cex.lab=1.5,at=espbox)
-    title(ylab="axis1, groups 1 & 2",line = 2,cex.lab=1.5, adj=0.5)
+    title(ylab="axis1, groups A & B",line = 2,cex.lab=1.5, adj=0.5)
     axis(1,at=c(0.5,1.75,3),labels = c("","C1",""),col=couleur_Axis[1],
          col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1)
     axis(1,at=c(3,4.5,6),labels = c("","C2",""),col=couleur_Axis[2],
@@ -398,7 +398,7 @@ Fct_Graph_GA_GB_par_2_tiff<-function(Detection="D1",couleur_noir="couleur",
             cex.axis=1,
             xlab=xlab2,
             xaxt="n",lwd=0.5,cex.lab=1.5,at=espbox)
-    title(ylab="axis1, groups 1 & 2",line = 2,cex.lab=1.5, adj=0.5)
+    title(ylab="axis1, groups A & B",line = 2,cex.lab=1.5, adj=0.5)
     axis(1,at=c(0.5,1.75,3),labels = c("","C1",""),col=couleur_Axis[1],
          col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1)
     axis(1,at=c(3,4.5,6),labels = c("","C2",""),col=couleur_Axis[2],
@@ -417,7 +417,7 @@ Fct_Graph_GA_GB_par_2_tiff<-function(Detection="D1",couleur_noir="couleur",
             cex.axis=1,
             xlab=xlab3,
             xaxt="n",lwd=0.5,cex.lab=1.5,at=espbox)
-    title(ylab="axis2, groups 1 & 2",line = 2,cex.lab=1.5, adj=0.5)
+    title(ylab="axis2, groups A & B",line = 2,cex.lab=1.5, adj=0.5)
     axis(1,at=c(0.5,1.75,3),labels = c("","C1",""),col=couleur_Axis[1],
          col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1)
     axis(1,at=c(3,4.5,6),labels = c("","C2",""),col=couleur_Axis[2],
@@ -436,7 +436,7 @@ Fct_Graph_GA_GB_par_2_tiff<-function(Detection="D1",couleur_noir="couleur",
             cex.axis=1,
             xlab=xlab4,
             xaxt="n",lwd=0.5,cex.lab=1.5,at=espbox)
-    title(ylab="axis2, groups 1 & 2",line = 2,cex.lab=1.5, adj=0.5)
+    title(ylab="axis2, groups A & B",line = 2,cex.lab=1.5, adj=0.5)
     axis(1,at=c(0.5,1.75,3),labels = c("","C1",""),col=couleur_Axis[1],
          col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1)
     axis(1,at=c(3,4.5,6),labels = c("","C2",""),col=couleur_Axis[2],
@@ -463,7 +463,7 @@ Fct_Graph_GA_GB_par_2_tiff<-function(Detection="D1",couleur_noir="couleur",
             cex.axis=1,
             xlab=xlab5,
             xaxt="n",lwd=0.5,cex.lab=1.5,at=espbox)
-    title(ylab="axis1, groups 1 & 2",line = 2,cex.lab=1.5, adj=0.5)
+    title(ylab="axis1, groups A & B",line = 2,cex.lab=1.5, adj=0.5)
     axis(1,at=c(0.5,1.75,3),labels = c("","C1",""),col=couleur_Axis[1],
          col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1)
     axis(1,at=c(3,4.5,6),labels = c("","C2",""),col=couleur_Axis[2],
@@ -483,7 +483,7 @@ Fct_Graph_GA_GB_par_2_tiff<-function(Detection="D1",couleur_noir="couleur",
             cex.axis=1,
             xlab=xlab6,
             xaxt="n",lwd=0.5,cex.lab=1.5,at=espbox)
-    title(ylab="axis1, groups 1 & 2",line = 2,cex.lab=1.5, adj=0.5)
+    title(ylab="axis1, groups A & B",line = 2,cex.lab=1.5, adj=0.5)
     axis(1,at=c(0.5,1.75,3),labels = c("","C1",""),col=couleur_Axis[1],
          col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1)
     axis(1,at=c(3,4.5,6),labels = c("","C2",""),col=couleur_Axis[2],
@@ -502,7 +502,7 @@ Fct_Graph_GA_GB_par_2_tiff<-function(Detection="D1",couleur_noir="couleur",
             cex.axis=1,
             xlab=xlab7,
             xaxt="n",lwd=0.5,cex.lab=1.5,at=espbox)
-    title(ylab="axis2, groups 1 & 2",line = 2,cex.lab=1.5, adj=0.5)
+    title(ylab="axis2, groups A & B",line = 2,cex.lab=1.5, adj=0.5)
     axis(1,at=c(0.5,1.75,3),labels = c("","C1",""),col=couleur_Axis[1],
          col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1)
     axis(1,at=c(3,4.5,6),labels = c("","C2",""),col=couleur_Axis[2],
@@ -521,7 +521,7 @@ Fct_Graph_GA_GB_par_2_tiff<-function(Detection="D1",couleur_noir="couleur",
             cex.axis=1,
             xlab=xlab8,
             xaxt="n",lwd=0.5,cex.lab=1.5,at=espbox)
-    title(ylab="axis2, groups 1 & 2",line = 2,cex.lab=1.5, adj=0.5)
+    title(ylab="axis2, groups A & B",line = 2,cex.lab=1.5, adj=0.5)
     axis(1,at=c(0.5,1.75,3),labels = c("","C1",""),col=couleur_Axis[1],
          col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1)
     axis(1,at=c(3,4.5,6),labels = c("","C2",""),col=couleur_Axis[2],

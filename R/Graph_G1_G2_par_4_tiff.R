@@ -97,7 +97,7 @@ Fct_Graph_G1_G2_par_4_tiff<-function(Detection="D1",couleur_noir="couleur",
     M_Grp_1_2_Axe1_Naive_G2<-M_Grp_1_2_Axe1_pcoa_Naive_good
     M_Grp_1_2_Axe2_G2<-M_Grp_1_2_Axe2_pcoa_good
     M_Grp_1_2_Axe2_Naive_G2<-M_Grp_1_2_Axe2_pcoa_Naive_good
-    text_2<-graph_1
+    text_2<-graph_2
   }
   
   if (graph_2=="PCoA_chao"){
@@ -106,7 +106,7 @@ Fct_Graph_G1_G2_par_4_tiff<-function(Detection="D1",couleur_noir="couleur",
     M_Grp_1_2_Axe1_Naive_G2<-M_Grp_1_2_Axe1_pcoa_Naive_good
     M_Grp_1_2_Axe2_G2<-M_Grp_1_2_Axe2_pcoa_good
     M_Grp_1_2_Axe2_Naive_G2<-M_Grp_1_2_Axe2_pcoa_Naive_good
-    text_2<-graph_1
+    text_2<-graph_2
   }
   
   if (graph_2=="nMDS_bray"){
@@ -115,7 +115,7 @@ Fct_Graph_G1_G2_par_4_tiff<-function(Detection="D1",couleur_noir="couleur",
     M_Grp_1_2_Axe1_Naive_G2<-M_Grp_1_2_Axe1_nmds_Naive_good
     M_Grp_1_2_Axe2_G2<-M_Grp_1_2_Axe2_nmds_good
     M_Grp_1_2_Axe2_Naive_G2<-M_Grp_1_2_Axe2_nmds_Naive_good
-    text_2<-graph_1
+    text_2<-graph_2
   }
   
   if (graph_2=="nMDS_chao"){
@@ -124,7 +124,7 @@ Fct_Graph_G1_G2_par_4_tiff<-function(Detection="D1",couleur_noir="couleur",
     M_Grp_1_2_Axe1_Naive_G2<-M_Grp_1_2_Axe1_nmds_Naive_good
     M_Grp_1_2_Axe2_G2<-M_Grp_1_2_Axe2_nmds_good
     M_Grp_1_2_Axe2_Naive_G2<-M_Grp_1_2_Axe2_nmds_Naive_good
-    text_2<-graph_1
+    text_2<-graph_2
   }
   
   #-- chargement des donnees pour le graph_3 (ici les coordonnees uniquement)

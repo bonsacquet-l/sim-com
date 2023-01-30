@@ -7,7 +7,7 @@
 #-------------------------------------#
 
 Fct_Graph_RV_Sp_par_4_tiff<-function(Detection="D1",
-                                     graph_1="ACP",graph_2="AFC",
+                                     graph_1="ACP",graph_2="PCoA_bray",
                                      graph_3="PCoA_chao",graph_4="nMDS_chao",
                                      ylimG1=c(0,1),ylimG2=c(0,1),
                                      ylimG3=c(0,1),ylimG4=c(0,1)) {

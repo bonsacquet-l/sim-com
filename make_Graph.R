@@ -496,25 +496,25 @@ source(file.path("R","Graph_RV_Site_par_2_tiff.R"))
     # D1  # -----------------
 
     Fct_Graph_RV_Sp_tt_tiff(Detection="D1") 
-    Fct_Graph_RV_Sp_par_2_tiff(Detection="D1",
+    Fct_Graph_RV_Sp_par_4_tiff(Detection="D1",
                                graph_1="ACP",graph_2="PCoA_bray",
-                               graph_3="PCoA_chao",graph_4="nMDS_chao")
+                               graph_3="nMDS_chao",graph_4="PCoA_chao")
     Fct_Graph_RV_Sp_par_2_tiff(Detection="D1",
                                graph_1="AFC",graph_2="nMDS_bray")
     
     # D2  # -----------------
 
     Fct_Graph_RV_Sp_tt_tiff(Detection="D2") 
-    Fct_Graph_RV_Sp_par_2_tiff(Detection="D2",
+    Fct_Graph_RV_Sp_par_4_tiff(Detection="D2",
                                graph_1="ACP",graph_2="PCoA_bray",
-                               graph_3="PCoA_chao",graph_4="nMDS_chao")
+                               graph_3="nMDS_chao",graph_4="PCoA_chao")
     Fct_Graph_RV_Sp_par_2_tiff(Detection="D2",
                                graph_1="AFC",graph_2="nMDS_bray")  
     
     # D3  # -----------------
 
     Fct_Graph_RV_Sp_tt_tiff(Detection="D3") 
-    Fct_Graph_RV_Sp_par_2_tiff(Detection="D3",
+    Fct_Graph_RV_Sp_par_4_tiff(Detection="D3",
                                graph_1="ACP",graph_2="PCoA_bray",
                                graph_3="PCoA_chao",graph_4="nMDS_chao")
     Fct_Graph_RV_Sp_par_2_tiff(Detection="D3",
@@ -523,7 +523,7 @@ source(file.path("R","Graph_RV_Site_par_2_tiff.R"))
     # D4  # -----------------
 
     Fct_Graph_RV_Sp_tt_tiff(Detection="D4") 
-    Fct_Graph_RV_Sp_par_2_tiff(Detection="D4",
+    Fct_Graph_RV_Sp_par_4_tiff(Detection="D4",
                                graph_1="ACP",graph_2="PCoA_bray",
                                graph_3="PCoA_chao",graph_4="nMDS_chao")
     Fct_Graph_RV_Sp_par_2_tiff(Detection="D4",
@@ -532,7 +532,7 @@ source(file.path("R","Graph_RV_Site_par_2_tiff.R"))
     # D5  # -----------------
 
     Fct_Graph_RV_Sp_tt_tiff(Detection="D5") 
-    Fct_Graph_RV_Sp_par_2_tiff(Detection="D5",
+    Fct_Graph_RV_Sp_par_4_tiff(Detection="D5",
                                graph_1="ACP",graph_2="PCoA_bray",
                                graph_3="PCoA_chao",graph_4="nMDS_chao")
     Fct_Graph_RV_Sp_par_2_tiff(Detection="D5",

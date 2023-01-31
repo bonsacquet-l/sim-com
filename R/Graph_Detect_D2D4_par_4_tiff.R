@@ -289,7 +289,7 @@ Fct_Graph_Detect_D2D4_par_4_tiff<-function(Detection="D4",couleur_noir="couleur"
   #----------------# 
   # les graphiques #
   #----------------#
-  tiff(file=saveData, units="in", width = 10.1, height = 15, pointsize = 7,res=300)
+  tiff(file=saveData, units="in", width = 10.1, height = 13, pointsize = 9,res=300)
   
   layout(matrix(c(1,2,11,12,13,3,4,11,14,15,5,5,11,16,16,
                   6,7,11,17,18,8,9,11,19,20,10,10,11,21,21),ncol=5,byrow=TRUE),
@@ -298,83 +298,83 @@ Fct_Graph_Detect_D2D4_par_4_tiff<-function(Detection="D4",couleur_noir="couleur"
   
   #-- graph_1
   #- axe 1 informed data
-  par(mar=c(4,5,0.5,1))
+  par(mar=c(6,5,0.5,1))
   boxplot(M_Grp_Detect_Axe1_G1[,colonnes],
           ylim=ylimG1_1,
           col=couleur, border=bordure,outline=FALSE,
           cex.axis=1.6,
           xlab=xlab1,
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
-  title(ylab="axis1, more/less detectable",line = 3,cex.lab=2.2, adj=0.5)
+  title(ylab="axis1, more/less detectable",line = 3,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
   mtext(text ="a", side=2, line = 3, at=ylimG1_1[2], las=2 ,cex = 2.2)
   abline(h=0,col="black",lty=2,lwd=0.5)
   
   #- axe 1 naive data
-  par(mar=c(4,5,0.5,1))
+  par(mar=c(6,5,0.5,1))
   boxplot(M_Grp_Detect_Axe1_Naive_G1[,colonnes],
           ylim=ylimG1_2,
           col=couleur, border=bordure,outline=FALSE,
           cex.axis=1.6,
           xlab=xlab2,
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
-  title(ylab="axis1, more/less detectable",line = 3,cex.lab=2.2, adj=0.5)
+  title(ylab="axis1, more/less detectable",line = 3,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
   abline(h=0,col="black",lty=2,lwd=0.5)
   
   #- axe 2 informed data
-  par(mar=c(4,5,0.5,1))
+  par(mar=c(6,5,0.5,1))
   boxplot(M_Grp_Detect_Axe2_G1[,colonnes],
           ylim=ylimG1_3,
           col=couleur, border=bordure,outline=FALSE,
           cex.axis=1.6,
           xlab=xlab3,
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
-  title(ylab="axis2, more/less detectable",line = 3,cex.lab=2.2, adj=0.5)
+  title(ylab="axis2, more/less detectable",line = 3,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
   abline(h=0,col="black",lty=2,lwd=0.5)
   
   #- axe 2 naive data
-  par(mar=c(4,5,0.5,1))
+  par(mar=c(6,5,0.5,1))
   boxplot(M_Grp_Detect_Axe2_Naive_G1[,colonnes],
           ylim=ylimG1_4,
           col=couleur, border=bordure,outline=FALSE,
           cex.axis=1.6,
           xlab=xlab4,
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
-  title(ylab="axis2, more/less detectable",line = 3,cex.lab=2.2, adj=0.5)
+  title(ylab="axis2, more/less detectable",line = 3,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
   abline(h=0,col="black",lty=2,lwd=0.5) 
   
-  mtext(text =text_1, side=1, line = 3.5, at=par('usr')[1]-7, las=1 ,cex = 1.7)
+  mtext(text =text_1, side=1, line = 5, at=-10, las=1 ,cex = 1.7)
   
   #-- une marge
   par(mar=c(0,0,0,0))
@@ -383,83 +383,83 @@ Fct_Graph_Detect_D2D4_par_4_tiff<-function(Detection="D4",couleur_noir="couleur"
   
   #-- graph_2
   #- axe 1 informed data
-  par(mar=c(4,5,0.5,1))
+  par(mar=c(6,5,0.5,1))
   boxplot(M_Grp_Detect_Axe1_G2[,colonnes],
           ylim=ylimG2_1,
           col=couleur, border=bordure,outline=FALSE,
           cex.axis=1.6,
           xlab=xlab5,
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
-  title(ylab="axis1, more/less detectable",line = 3  ,cex.lab=2.2, adj=0.5)
+  title(ylab="axis1, more/less detectable",line = 3  ,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
   mtext(text ="b", side=2, line = 3, at=ylimG2_1[2], las=2 ,cex = 2.2)
   abline(h=0,col="black",lty=2,lwd=0.5)
   
   #- axe 1 naive data
-  par(mar=c(4,5,0.5,1))
+  par(mar=c(6,5,0.5,1))
   boxplot(M_Grp_Detect_Axe1_Naive_G2[,colonnes],
           ylim=ylimG2_2,
           col=couleur, border=bordure,outline=FALSE,
           cex.axis=1.6,
           xlab=xlab6,
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
-  title(ylab="axis1, more/less detectable",line = 3  ,cex.lab=2.2, adj=0.5)
+  title(ylab="axis1, more/less detectable",line = 3  ,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
   abline(h=0,col="black",lty=2,lwd=0.5)
   
   #- axe 2 informed data
-  par(mar=c(4,5,0.5,1))
+  par(mar=c(6,5,0.5,1))
   boxplot(M_Grp_Detect_Axe2_G2[,colonnes],
           ylim=ylimG2_3,
           col=couleur, border=bordure,outline=FALSE,
           cex.axis=1.6,
           xlab=xlab7,
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
-  title(ylab="axis2, more/less detectable",line = 3,cex.lab=2.2, adj=0.5)
+  title(ylab="axis2, more/less detectable",line = 3,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
   abline(h=0,col="black",lty=2,lwd=0.5)
   
   #- axe 2 naive data
-  par(mar=c(4,5,0.5,1))
+  par(mar=c(6,5,0.5,1))
   boxplot(M_Grp_Detect_Axe2_Naive_G2[,colonnes],
           ylim=ylimG2_4,
           col=couleur, border=bordure,outline=FALSE,
           cex.axis=1.6,
           xlab=xlab8,
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
-  title(ylab="axis2, more/less detectable",line = 3,cex.lab=2.2, adj=0.5)
+  title(ylab="axis2, more/less detectable",line = 3,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
   abline(h=0,col="black",lty=2,lwd=0.7) 
   
-  mtext(text =text_2, side=1, line = 3.5, at=par('usr')[1]-7.5, las=1 ,cex = 1.7)
+  mtext(text =text_2, side=1, line = 5, at=-10, las=1 ,cex = 1.7)
   
   #-- une marge
   par(mar=c(0,0,0,0))
@@ -473,83 +473,83 @@ Fct_Graph_Detect_D2D4_par_4_tiff<-function(Detection="D4",couleur_noir="couleur"
   
   #-- graph_3
   #- axe 1 informed data
-  par(mar=c(4,5,0.5,1))
+  par(mar=c(6,5,0.5,1))
   boxplot(M_Grp_Detect_Axe1_G3[,colonnes],
           ylim=ylimG3_1,
           col=couleur, border=bordure,outline=FALSE,
           cex.axis=1.6,
           xlab=xlab9,
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
-  title(ylab="axis1, more/less detectable",line = 3,cex.lab=2.2, adj=0.5)
+  title(ylab="axis1, more/less detectable",line = 3,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
   mtext(text ="c", side=2, line = 3, at=ylimG3_1[2], las=2 ,cex = 2.2)
   abline(h=0,col="black",lty=2,lwd=0.5)
   
   #- axe 1 naive data
-  par(mar=c(4,5,0.5,1))
+  par(mar=c(6,5,0.5,1))
   boxplot(M_Grp_Detect_Axe1_Naive_G3[,colonnes],
           ylim=ylimG3_2,
           col=couleur, border=bordure,outline=FALSE,
           cex.axis=1.6,
           xlab=xlab10,
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
-  title(ylab="axis1, more/less detectable",line = 3,cex.lab=2.2, adj=0.5)
+  title(ylab="axis1, more/less detectable",line = 3,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
   abline(h=0,col="black",lty=2,lwd=0.5)
   
   #- axe 2 informed data
-  par(mar=c(4,5,0.5,1))
+  par(mar=c(6,5,0.5,1))
   boxplot(M_Grp_Detect_Axe2_G3[,colonnes],
           ylim=ylimG3_3,
           col=couleur, border=bordure,outline=FALSE,
           cex.axis=1.6,
           xlab=xlab11,
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
-  title(ylab="axis2, more/less detectable",line = 3,cex.lab=2.2, adj=0.5)
+  title(ylab="axis2, more/less detectable",line = 3,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
   abline(h=0,col="black",lty=2,lwd=0.5)
   
   #- axe 2 naive data
-  par(mar=c(4,5,0.5,1))
+  par(mar=c(6,5,0.5,1))
   boxplot(M_Grp_Detect_Axe2_Naive_G3[,colonnes],
           ylim=ylimG3_4,
           col=couleur, border=bordure,outline=FALSE,
           cex.axis=1.6,
           xlab=xlab12,
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
-  title(ylab="axis2, more/less detectable",line = 3,cex.lab=2.2, adj=0.5)
+  title(ylab="axis2, more/less detectable",line = 3,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
   abline(h=0,col="black",lty=2,lwd=0.5) 
   
-  mtext(text =text_3, side=1, line = 3.5, at=par('usr')[1]-7.5, las=1 ,cex = 1.7)
+  mtext(text =text_3, side=1, line = 5, at=-10, las=1 ,cex = 1.7)
   
   #-- une marge
   par(mar=c(0,0,0,0))
@@ -558,83 +558,83 @@ Fct_Graph_Detect_D2D4_par_4_tiff<-function(Detection="D4",couleur_noir="couleur"
   
   #-- graph_4
   #- axe 1 informed data
-  par(mar=c(4,5,0.5,1))
+  par(mar=c(6,5,0.5,1))
   boxplot(M_Grp_Detect_Axe1_G4[,colonnes],
           ylim=ylimG4_1,
           col=couleur, border=bordure,outline=FALSE,
           cex.axis=1.6,
           xlab=xlab13,
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
-  title(ylab="axis1, more/less detectable",line = 3,cex.lab=2.2, adj=0.5)
+  title(ylab="axis1, more/less detectable",line = 3,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
   mtext(text ="d", side=2, line = 3, at=ylimG4_1[2], las=2 ,cex = 2.2)
   abline(h=0,col="black",lty=2,lwd=0.5)
   
   #- axe 1 naive data
-  par(mar=c(4,5,0.5,1))
+  par(mar=c(6,5,0.5,1))
   boxplot(M_Grp_Detect_Axe1_Naive_G4[,colonnes],
           ylim=ylimG4_2,
           col=couleur, border=bordure,outline=FALSE,
           cex.axis=1.6,
           xlab=xlab14,
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
-  title(ylab="axis1, more/less detectable",line = 3,cex.lab=2.2, adj=0.5)
+  title(ylab="axis1, more/less detectable",line = 3,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
   abline(h=0,col="black",lty=2,lwd=0.5)
   
   #- axe 2 informed data
-  par(mar=c(4,5,0.5,1))
+  par(mar=c(6,5,0.5,1))
   boxplot(M_Grp_Detect_Axe2_G4[,colonnes],
           ylim=ylimG4_3,
           col=couleur, border=bordure,outline=FALSE,
           cex.axis=1.6,
           xlab=xlab15,
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
-  title(ylab="axis2, more/less detectable",line = 3,cex.lab=2.2, adj=0.5)
+  title(ylab="axis2, more/less detectable",line = 3,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
   abline(h=0,col="black",lty=2,lwd=0.5)
   
   #- axe 2 naive data
-  par(mar=c(4,5,0.5,1))
+  par(mar=c(6,5,0.5,1))
   boxplot(M_Grp_Detect_Axe2_Naive_G4[,colonnes],
           ylim=ylimG4_4,
           col=couleur, border=bordure,outline=FALSE,
           cex.axis=1.6,
           xlab=xlab16,
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
-  title(ylab="axis2, more/less detectable",line = 3,cex.lab=2.2, adj=0.5)
+  title(ylab="axis2, more/less detectable",line = 3,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.6)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
   abline(h=0,col="black",lty=2,lwd=0.7) 
   
-  mtext(text =text_4, side=1, line = 3.5, at=par('usr')[1]-7.5, las=1 ,cex = 1.7)
+  mtext(text =text_4, side=1, line = 5, at=-10, las=1 ,cex = 1.7)
   
   #-- une marge
   par(mar=c(0,0,0,0))

@@ -208,7 +208,7 @@ Fct_Graph_RV_Sp_par_4_tiff<-function(Detection="D1",
   ##-- COULEURS 
   #-- Si ce n'est pas D5
   if (Detection!="D5") {
-    tiff(file=saveData_couleur, units="in",width = 5.1, height = 7.6, pointsize = 7,res=300)
+    tiff(file=saveData_couleur, units="in",width = 5.1, height = 7, pointsize = 9,res=300)
     
     layout(matrix(c(1,5,6,2,5,7,3,5,8,4,5,9),ncol=3,byrow=TRUE),
            widths=c(2.5,0.1,2.5),heights=c(3.7,0.1,3.7,0.1))
@@ -221,9 +221,9 @@ Fct_Graph_RV_Sp_par_4_tiff<-function(Detection="D1",
             col=couleur,outline=FALSE,
             cex.axis=1.3,
             xlab=xlab1,
-            xaxt="n",lwd=0.5,cex.lab=1.8,at=espbox)
+            xaxt="n",lwd=0.5,cex.lab=1.5,at=espbox)
     
-    title(ylab=ylab1,line = 2.5,cex.lab=1.8)
+    title(ylab=ylab1,line = 2.5,cex.lab=1.5)
     axis(1,at=c(0.5,3.5,6.5),labels = c("","C1",""),col="black",
          col.axis="black",lwd=1,cex.axis=1.3)
     axis(1,at=c(6.5,10,13.5),labels = c("","C2",""),col="red",
@@ -232,7 +232,7 @@ Fct_Graph_RV_Sp_par_4_tiff<-function(Detection="D1",
          col.axis="blue",lwd=1,cex.axis=1.3)
     axis(1,at=c(20.5,23.5,26.5),labels = c("","C4",""),col="orange",
          col.axis="orange",lwd=1,cex.axis=1.3)
-    mtext(text ="a", side=2, line = 3.5, at=ylimG1[2], las=2 ,cex = 2)
+    mtext(text ="a", side=2, line = 3.5, at=ylimG1[2], las=2 ,cex = 1.5)
     
     abline(v = c(6.5,13.5,20.5),col="gray",lty=3,lwd=1)
     abline(h=0,col="black",lty=2,lwd=0.5)
@@ -250,9 +250,9 @@ Fct_Graph_RV_Sp_par_4_tiff<-function(Detection="D1",
             col=couleur,outline=FALSE,
             cex.axis=1.3,
             xlab=xlab2,
-            xaxt="n",lwd=0.5,cex.lab=1.8,at=espbox)
+            xaxt="n",lwd=0.5,cex.lab=1.5,at=espbox)
     
-    title(ylab=ylab2,line = 2.5,cex.lab=1.8)
+    title(ylab=ylab2,line = 2.5,cex.lab=1.5)
     axis(1,at=c(0.5,3.5,6.5),labels = c("","C1",""),col="black",
          col.axis="black",lwd=1,cex.axis=1.3)
     axis(1,at=c(6.5,10,13.5),labels = c("","C2",""),col="red",
@@ -261,7 +261,7 @@ Fct_Graph_RV_Sp_par_4_tiff<-function(Detection="D1",
          col.axis="blue",lwd=1,cex.axis=1.3)
     axis(1,at=c(20.5,23.5,26.5),labels = c("","C4",""),col="orange",
          col.axis="orange",lwd=1,cex.axis=1)
-    mtext(text ="b", side=2, line = 3.5, at=ylimG2[2], las=2 ,cex = 2)
+    mtext(text ="b", side=2, line = 3.5, at=ylimG2[2], las=2 ,cex = 1.5)
     
     abline(v = c(6.5,13.5,20.5),col="gray",lty=3,lwd=1)
     abline(h=0,col="black",lty=2,lwd=0.5)
@@ -284,9 +284,9 @@ Fct_Graph_RV_Sp_par_4_tiff<-function(Detection="D1",
             col=couleur,outline=FALSE,
             cex.axis=1.3,
             xlab=xlab3,
-            xaxt="n",lwd=0.5,cex.lab=1.8,at=espbox)
+            xaxt="n",lwd=0.5,cex.lab=1.5,at=espbox)
     
-    title(ylab=ylab3,line = 2.5,cex.lab=1.8)
+    title(ylab=ylab3,line = 2.5,cex.lab=1.5)
     axis(1,at=c(0.5,3.5,6.5),labels = c("","C1",""),col="black",
          col.axis="black",lwd=1,cex.axis=1.3)
     axis(1,at=c(6.5,10,13.5),labels = c("","C2",""),col="red",
@@ -295,7 +295,7 @@ Fct_Graph_RV_Sp_par_4_tiff<-function(Detection="D1",
          col.axis="blue",lwd=1,cex.axis=1.3)
     axis(1,at=c(20.5,23.5,26.5),labels = c("","C4",""),col="orange",
          col.axis="orange",lwd=1,cex.axis=1.3)
-    mtext(text ="c", side=2, line = 3.5, at=ylimG3[2], las=2 ,cex = 2)
+    mtext(text ="c", side=2, line = 3.5, at=ylimG3[2], las=2 ,cex = 1.5)
     
     abline(v = c(6.5,13.5,20.5),col="gray",lty=3,lwd=1)
     abline(h=0,col="black",lty=2,lwd=0.5)
@@ -313,9 +313,9 @@ Fct_Graph_RV_Sp_par_4_tiff<-function(Detection="D1",
             col=couleur,outline=FALSE,
             cex.axis=1.3,
             xlab=xlab4,
-            xaxt="n",lwd=0.5,cex.lab=1.8,at=espbox)
+            xaxt="n",lwd=0.5,cex.lab=1.5,at=espbox)
     
-    title(ylab=ylab4,line = 2.5,cex.lab=1.8)
+    title(ylab=ylab4,line = 2.5,cex.lab=1.5)
     axis(1,at=c(0.5,3.5,6.5),labels = c("","C1",""),col="black",
          col.axis="black",lwd=1,cex.axis=1.3)
     axis(1,at=c(6.5,10,13.5),labels = c("","C2",""),col="red",
@@ -324,7 +324,7 @@ Fct_Graph_RV_Sp_par_4_tiff<-function(Detection="D1",
          col.axis="blue",lwd=1,cex.axis=1.3)
     axis(1,at=c(20.5,23.5,26.5),labels = c("","C4",""),col="orange",
          col.axis="orange",lwd=1,cex.axis=1.3)
-    mtext(text ="d", side=2, line = 3.5, at=ylimG4[2], las=2 ,cex = 2)
+    mtext(text ="d", side=2, line = 3.5, at=ylimG4[2], las=2 ,cex = 1.5)
     
     abline(v = c(6.5,13.5,20.5),col="gray",lty=3,lwd=1)
     abline(h=0,col="black",lty=2,lwd=0.5)
@@ -335,7 +335,7 @@ Fct_Graph_RV_Sp_par_4_tiff<-function(Detection="D1",
   
   #-- Si c'est D5
   if (Detection=="D5") {
-    tiff(file=saveData_couleur, units="in",width = 5.1, height = 7.6, pointsize = 7,res=300)
+    tiff(file=saveData_couleur, units="in",width = 5.1, height = 7, pointsize = 9,res=300)
     
     layout(matrix(c(1,5,6,2,5,7,3,5,8,4,5,9),ncol=3,byrow=TRUE),
            widths=c(2.5,0.1,2.5),heights=c(3.7,0.1,3.7,0.1))
@@ -348,9 +348,9 @@ Fct_Graph_RV_Sp_par_4_tiff<-function(Detection="D1",
             col=couleur,outline=FALSE,
             cex.axis=1.3,
             xlab=xlab1,
-            xaxt="n",lwd=0.5,cex.lab=1.8,at=espbox)
+            xaxt="n",lwd=0.5,cex.lab=1.5,at=espbox)
     
-    title(ylab=ylab1,line = 2.5,cex.lab=1.8)
+    title(ylab=ylab1,line = 2.5,cex.lab=1.5)
     axis(1,at=c(0.5,1.25,2),labels = c("","C1",""),col="black",
          col.axis="black",lwd=1,cex.axis=1.3)
     axis(1,at=c(2,3,4),labels = c("","C2",""),col="red",
@@ -359,7 +359,7 @@ Fct_Graph_RV_Sp_par_4_tiff<-function(Detection="D1",
          col.axis="blue",lwd=1,cex.axis=1.3)
     axis(1,at=c(6,6.75,7.5),labels = c("","C4",""),col="orange",
          col.axis="orange",lwd=1,cex.axis=1.3)
-    mtext(text ="a", side=2, line = 3.5, at=ylimG1[2], las=2 ,cex = 2)
+    mtext(text ="a", side=2, line = 3.5, at=ylimG1[2], las=2 ,cex = 1.5)
     
     abline(v = c(2,4,6),col="gray",lty=3,lwd=1)
     abline(h=0,col="black",lty=2,lwd=0.5)
@@ -377,9 +377,9 @@ Fct_Graph_RV_Sp_par_4_tiff<-function(Detection="D1",
             col=couleur,outline=FALSE,
             cex.axis=1.3,
             xlab=xlab2,
-            xaxt="n",lwd=0.5,cex.lab=1.8,at=espbox)
+            xaxt="n",lwd=0.5,cex.lab=1.5,at=espbox)
     
-    title(ylab=ylab2,line = 2.5,cex.lab=1.8)
+    title(ylab=ylab2,line = 2.5,cex.lab=1.5)
     axis(1,at=c(0.5,1.25,2),labels = c("","C1",""),col="black",
          col.axis="black",lwd=1,cex.axis=1.3)
     axis(1,at=c(2,3,4),labels = c("","C2",""),col="red",
@@ -388,7 +388,7 @@ Fct_Graph_RV_Sp_par_4_tiff<-function(Detection="D1",
          col.axis="blue",lwd=1,cex.axis=1.3)
     axis(1,at=c(6,6.75,7.5),labels = c("","C4",""),col="orange",
          col.axis="orange",lwd=1,cex.axis=1.3)
-    mtext(text ="b", side=2, line = 3.5, at=ylimG2[2], las=2 ,cex = 2)
+    mtext(text ="b", side=2, line = 3.5, at=ylimG2[2], las=2 ,cex = 1.5)
     
     abline(v = c(2,4,6),col="gray",lty=3,lwd=1)
     abline(h=0,col="black",lty=2,lwd=0.5)
@@ -411,9 +411,9 @@ Fct_Graph_RV_Sp_par_4_tiff<-function(Detection="D1",
             col=couleur,outline=FALSE,
             cex.axis=1.3,
             xlab=xlab3,
-            xaxt="n",lwd=0.5,cex.lab=1.8,at=espbox)
+            xaxt="n",lwd=0.5,cex.lab=1.5,at=espbox)
     
-    title(ylab=ylab3,line = 2.5,cex.lab=1.8)
+    title(ylab=ylab3,line = 2.5,cex.lab=1.5)
     axis(1,at=c(0.5,1.25,2),labels = c("","C1",""),col="black",
          col.axis="black",lwd=1,cex.axis=1.3)
     axis(1,at=c(2,3,4),labels = c("","C2",""),col="red",
@@ -422,7 +422,7 @@ Fct_Graph_RV_Sp_par_4_tiff<-function(Detection="D1",
          col.axis="blue",lwd=1,cex.axis=1.3)
     axis(1,at=c(6,6.75,7.5),labels = c("","C4",""),col="orange",
          col.axis="orange",lwd=1,cex.axis=1.3)
-    mtext(text ="c", side=2, line = 3.5, at=ylimG3[2], las=2 ,cex = 2)
+    mtext(text ="c", side=2, line = 3.5, at=ylimG3[2], las=2 ,cex = 1.5)
     
     abline(v = c(2,4,6),col="gray",lty=3,lwd=1)
     abline(h=0,col="black",lty=2,lwd=0.5)
@@ -440,9 +440,9 @@ Fct_Graph_RV_Sp_par_4_tiff<-function(Detection="D1",
             col=couleur,outline=FALSE,
             cex.axis=1.3,
             xlab=xlab4,
-            xaxt="n",lwd=0.5,cex.lab=1.8,at=espbox)
+            xaxt="n",lwd=0.5,cex.lab=1.5,at=espbox)
     
-    title(ylab=ylab4,line = 2.5,cex.lab=1.8)
+    title(ylab=ylab4,line = 2.5,cex.lab=1.5)
     axis(1,at=c(0.5,1.25,2),labels = c("","C1",""),col="black",
          col.axis="black",lwd=1,cex.axis=1.3)
     axis(1,at=c(2,3,4),labels = c("","C2",""),col="red",
@@ -451,7 +451,7 @@ Fct_Graph_RV_Sp_par_4_tiff<-function(Detection="D1",
          col.axis="blue",lwd=1,cex.axis=1.3)
     axis(1,at=c(6,6.75,7.5),labels = c("","C4",""),col="orange",
          col.axis="orange",lwd=1,cex.axis=1.3)
-    mtext(text ="d", side=2, line = 3.5, at=ylimG4[2], las=2 ,cex = 2)
+    mtext(text ="d", side=2, line = 3.5, at=ylimG4[2], las=2 ,cex = 1.5)
     
     abline(v = c(2,4,6),col="gray",lty=3,lwd=1)
     abline(h=0,col="black",lty=2,lwd=0.5)

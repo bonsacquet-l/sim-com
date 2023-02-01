@@ -141,9 +141,9 @@ Fct_Graph_RV_Site_par_2_tiff<-function(Detection="D1",
             col=couleur,outline=FALSE,
             cex.axis=1.6,
             xlab=xlab1,
-            xaxt="n",lwd=0.5,cex.lab=2.2,at=espbox)
+            xaxt="n",lwd=0.5,cex.lab=2.4,at=espbox)
     
-    title(ylab=ylab1,line = 2.5,cex.lab=2.2)
+    title(ylab=ylab1,line = 2.5,cex.lab=2.4)
     axis(1,at=c(0.5,3.5,6.5),labels = c("","C1",""),col="black",
          col.axis="black",lwd=1,cex.axis=1.3)
     axis(1,at=c(6.5,10,13.5),labels = c("","C2",""),col="red",
@@ -170,9 +170,9 @@ Fct_Graph_RV_Site_par_2_tiff<-function(Detection="D1",
             col=couleur,outline=FALSE,
             cex.axis=1.6,
             xlab=xlab2,
-            xaxt="n",lwd=0.5,cex.lab=2.2,at=espbox)
+            xaxt="n",lwd=0.5,cex.lab=2.4,at=espbox)
     
-    title(ylab=ylab2,line = 2.5,cex.lab=2.2)
+    title(ylab=ylab2,line = 2.5,cex.lab=2.4)
     axis(1,at=c(0.5,3.5,6.5),labels = c("","C1",""),col="black",
          col.axis="black",lwd=1,cex.axis=1.3)
     axis(1,at=c(6.5,10,13.5),labels = c("","C2",""),col="red",
@@ -205,9 +205,9 @@ Fct_Graph_RV_Site_par_2_tiff<-function(Detection="D1",
             col=couleur,outline=FALSE,
             cex.axis=1.6,
             xlab=xlab1,
-            xaxt="n",lwd=0.5,cex.lab=2.2,at=espbox)
+            xaxt="n",lwd=0.5,cex.lab=2.4,at=espbox)
     
-    title(ylab=ylab1,line = 2.5,cex.lab=2.2)
+    title(ylab=ylab1,line = 2.5,cex.lab=2.4)
     axis(1,at=c(0.5,1.25,2),labels = c("","C1",""),col="black",
          col.axis="black",lwd=1,cex.axis=1.3)
     axis(1,at=c(2,3,4),labels = c("","C2",""),col="red",
@@ -234,9 +234,9 @@ Fct_Graph_RV_Site_par_2_tiff<-function(Detection="D1",
             col=couleur,outline=FALSE,
             cex.axis=1.6,
             xlab=xlab2,
-            xaxt="n",lwd=0.5,cex.lab=2.2,at=espbox)
+            xaxt="n",lwd=0.5,cex.lab=2.4,at=espbox)
     
-    title(ylab=ylab2,line = 2.5,cex.lab=2.2)
+    title(ylab=ylab2,line = 2.5,cex.lab=2.4)
     axis(1,at=c(0.5,1.25,2),labels = c("","C1",""),col="black",
          col.axis="black",lwd=1,cex.axis=1.3)
     axis(1,at=c(2,3,4),labels = c("","C2",""),col="red",

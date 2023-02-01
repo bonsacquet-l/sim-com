@@ -289,7 +289,7 @@ Fct_Graph_Detect_D2D4_par_4_tiff<-function(Detection="D4",couleur_noir="couleur"
   #----------------# 
   # les graphiques #
   #----------------#
-  tiff(file=saveData, units="in", width = 10.1, height = 13, pointsize = 9,res=300)
+  tiff(file=saveData, units="in", width = 9, height = 15, pointsize = 10,res=300)
   
   layout(matrix(c(1,2,11,12,13,3,4,11,14,15,5,5,11,16,16,
                   6,7,11,17,18,8,9,11,19,20,10,10,11,21,21),ncol=5,byrow=TRUE),
@@ -307,13 +307,13 @@ Fct_Graph_Detect_D2D4_par_4_tiff<-function(Detection="D4",couleur_noir="couleur"
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
   title(ylab="axis1, more/less detectable",line = 3,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.2)
   mtext(text ="a", side=2, line = 3, at=ylimG1_1[2], las=2 ,cex = 2.2)
   abline(h=0,col="black",lty=2,lwd=0.5)
   
@@ -327,13 +327,13 @@ Fct_Graph_Detect_D2D4_par_4_tiff<-function(Detection="D4",couleur_noir="couleur"
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
   title(ylab="axis1, more/less detectable",line = 3,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.2)
   abline(h=0,col="black",lty=2,lwd=0.5)
   
   #- axe 2 informed data
@@ -346,13 +346,13 @@ Fct_Graph_Detect_D2D4_par_4_tiff<-function(Detection="D4",couleur_noir="couleur"
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
   title(ylab="axis2, more/less detectable",line = 3,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.2)
   abline(h=0,col="black",lty=2,lwd=0.5)
   
   #- axe 2 naive data
@@ -365,16 +365,16 @@ Fct_Graph_Detect_D2D4_par_4_tiff<-function(Detection="D4",couleur_noir="couleur"
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
   title(ylab="axis2, more/less detectable",line = 3,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.2)
   abline(h=0,col="black",lty=2,lwd=0.5) 
   
-  mtext(text =text_1, side=1, line = 5, at=-10, las=1 ,cex = 1.7)
+  mtext(text =text_1, side=1, line = 5, at=-10, las=1 ,cex = 1.5)
   
   #-- une marge
   par(mar=c(0,0,0,0))
@@ -392,13 +392,13 @@ Fct_Graph_Detect_D2D4_par_4_tiff<-function(Detection="D4",couleur_noir="couleur"
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
   title(ylab="axis1, more/less detectable",line = 3  ,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.2)
   mtext(text ="b", side=2, line = 3, at=ylimG2_1[2], las=2 ,cex = 2.2)
   abline(h=0,col="black",lty=2,lwd=0.5)
   
@@ -412,13 +412,13 @@ Fct_Graph_Detect_D2D4_par_4_tiff<-function(Detection="D4",couleur_noir="couleur"
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
   title(ylab="axis1, more/less detectable",line = 3  ,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.2)
   abline(h=0,col="black",lty=2,lwd=0.5)
   
   #- axe 2 informed data
@@ -431,13 +431,13 @@ Fct_Graph_Detect_D2D4_par_4_tiff<-function(Detection="D4",couleur_noir="couleur"
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
   title(ylab="axis2, more/less detectable",line = 3,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.2)
   abline(h=0,col="black",lty=2,lwd=0.5)
   
   #- axe 2 naive data
@@ -450,16 +450,16 @@ Fct_Graph_Detect_D2D4_par_4_tiff<-function(Detection="D4",couleur_noir="couleur"
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
   title(ylab="axis2, more/less detectable",line = 3,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.2)
   abline(h=0,col="black",lty=2,lwd=0.7) 
   
-  mtext(text =text_2, side=1, line = 5, at=-10, las=1 ,cex = 1.7)
+  mtext(text =text_2, side=1, line = 5, at=-10, las=1 ,cex = 1.5)
   
   #-- une marge
   par(mar=c(0,0,0,0))
@@ -482,13 +482,13 @@ Fct_Graph_Detect_D2D4_par_4_tiff<-function(Detection="D4",couleur_noir="couleur"
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
   title(ylab="axis1, more/less detectable",line = 3,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.2)
   mtext(text ="c", side=2, line = 3, at=ylimG3_1[2], las=2 ,cex = 2.2)
   abline(h=0,col="black",lty=2,lwd=0.5)
   
@@ -502,13 +502,13 @@ Fct_Graph_Detect_D2D4_par_4_tiff<-function(Detection="D4",couleur_noir="couleur"
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
   title(ylab="axis1, more/less detectable",line = 3,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.2)
   abline(h=0,col="black",lty=2,lwd=0.5)
   
   #- axe 2 informed data
@@ -521,13 +521,13 @@ Fct_Graph_Detect_D2D4_par_4_tiff<-function(Detection="D4",couleur_noir="couleur"
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
   title(ylab="axis2, more/less detectable",line = 3,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.2)
   abline(h=0,col="black",lty=2,lwd=0.5)
   
   #- axe 2 naive data
@@ -540,16 +540,16 @@ Fct_Graph_Detect_D2D4_par_4_tiff<-function(Detection="D4",couleur_noir="couleur"
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
   title(ylab="axis2, more/less detectable",line = 3,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.2)
   abline(h=0,col="black",lty=2,lwd=0.5) 
   
-  mtext(text =text_3, side=1, line = 5, at=-10, las=1 ,cex = 1.7)
+  mtext(text =text_3, side=1, line = 5, at=-10, las=1 ,cex = 1.5)
   
   #-- une marge
   par(mar=c(0,0,0,0))
@@ -567,13 +567,13 @@ Fct_Graph_Detect_D2D4_par_4_tiff<-function(Detection="D4",couleur_noir="couleur"
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
   title(ylab="axis1, more/less detectable",line = 3,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.2)
   mtext(text ="d", side=2, line = 3, at=ylimG4_1[2], las=2 ,cex = 2.2)
   abline(h=0,col="black",lty=2,lwd=0.5)
   
@@ -587,13 +587,13 @@ Fct_Graph_Detect_D2D4_par_4_tiff<-function(Detection="D4",couleur_noir="couleur"
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
   title(ylab="axis1, more/less detectable",line = 3,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.2)
   abline(h=0,col="black",lty=2,lwd=0.5)
   
   #- axe 2 informed data
@@ -606,13 +606,13 @@ Fct_Graph_Detect_D2D4_par_4_tiff<-function(Detection="D4",couleur_noir="couleur"
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
   title(ylab="axis2, more/less detectable",line = 3,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.2)
   abline(h=0,col="black",lty=2,lwd=0.5)
   
   #- axe 2 naive data
@@ -625,16 +625,16 @@ Fct_Graph_Detect_D2D4_par_4_tiff<-function(Detection="D4",couleur_noir="couleur"
           xaxt="n",lwd=0.5,cex.lab=2,at=espbox)
   title(ylab="axis2, more/less detectable",line = 3,cex.lab=2, adj=0.5)
   axis(1,at=c(0.5,6,11.5),labels = c("","C1",""),col=couleur_Axis[1],
-       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[1],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(11.5,17.5,23.5),labels = c("","C2",""),col=couleur_Axis[2],
-       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[2],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(23.5,29.5,35.5),labels = c("","C3",""),col=couleur_Axis[3],
-       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(35.5,41,46.5),labels = c("","C4",""),col=couleur_Axis[4],
-       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.3)
+       col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.2)
   abline(h=0,col="black",lty=2,lwd=0.7) 
   
-  mtext(text =text_4, side=1, line = 5, at=-10, las=1 ,cex = 1.7)
+  mtext(text =text_4, side=1, line = 5, at=-10, las=1 ,cex = 1.5)
   
   #-- une marge
   par(mar=c(0,0,0,0))

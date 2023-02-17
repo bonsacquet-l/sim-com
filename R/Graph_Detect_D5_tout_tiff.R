@@ -342,7 +342,7 @@ Fct_Graph_Detect_D5_tout_tiff<-function(Detection="D5",couleur_noir="couleur",
        col.axis=couleur_Axis[3],lwd=0.7,cex.axis=1.2)
   axis(1,at=c(9,10.25,11.5),labels = c("","C4",""),col=couleur_Axis[4],
        col.axis=couleur_Axis[4],lwd=0.7,cex.axis=1.2)
-  mtext(text ="d", side=2, line = 5, at=ylimnMDSbray1[2], las=2 ,cex = 2.2)
+  mtext(text ="d", side=2, line = 3, at=ylimnMDSbray1[2], las=2 ,cex = 2.2)
   abline(h=0,col="black",lty=2,lwd=0.5)
   
   #- axe 1 naive data

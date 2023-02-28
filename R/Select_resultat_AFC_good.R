@@ -16,24 +16,44 @@ fct_select_resultAFC<-function() {
   #-- passage en NA des resultats des simulations conciderees comme insufisament informees
   if(length(T_bad_simul_CA$Simul)!=0){
     i<-T_bad_simul_CA%>%pull("Simul")
-      M_Grp_1_2_Axe1_AFC_good<-tibble(M_Grp_1_2_Axe1_AFC)%>%
-                                mutate(across(all_of(starts_with(i)),~NA))%>%
-                                as.matrix()
+    ###
+      M_Grp_1_2_Axe1_AFC_good<-as_tibble(M_Grp_1_2_Axe1_AFC)
+      for (z in i){
+        M_Grp_1_2_Axe1_AFC_good<-M_Grp_1_2_Axe1_AFC_good%>%
+          mutate_at(vars(all_of(starts_with(z))),~NA)
+      }
+      
+      M_Grp_1_2_Axe1_AFC_good<-M_Grp_1_2_Axe1_AFC_good%>% as.matrix()
       colnames(M_Grp_1_2_Axe1_AFC_good)<-colnames(M_Grp_1_2_Axe1_AFC)
+      ###
       
-      M_Grp_1_2_Axe1_AFC_Naive_good<-tibble(M_Grp_1_2_Axe1_AFC_Naive)%>%
-                                      mutate(across(all_of(starts_with(i)),~NA))%>%
-                                      as.matrix()
+      M_Grp_1_2_Axe1_AFC_Naive_good<-as_tibble(M_Grp_1_2_Axe1_AFC_Naive)
+      for (z in i){
+        M_Grp_1_2_Axe1_AFC_Naive_good<-M_Grp_1_2_Axe1_AFC_Naive_good%>%
+          mutate_at(vars(all_of(starts_with(z))),~NA)
+      }
+      
+      M_Grp_1_2_Axe1_AFC_Naive_good<-M_Grp_1_2_Axe1_AFC_Naive_good%>% as.matrix()
       colnames(M_Grp_1_2_Axe1_AFC_Naive_good)<-colnames(M_Grp_1_2_Axe1_AFC_Naive)
+      ###
       
-      M_Grp_1_2_Axe2_AFC_good<-tibble(M_Grp_1_2_Axe2_AFC)%>%
-                                mutate(across(all_of(starts_with(i)),~NA))%>%
-                                as.matrix()
+      M_Grp_1_2_Axe2_AFC_good<-as_tibble(M_Grp_1_2_Axe2_AFC)
+      for (z in i){
+        M_Grp_1_2_Axe2_AFC_good<-M_Grp_1_2_Axe2_AFC_good%>%
+          mutate_at(vars(all_of(starts_with(z))),~NA)
+      }
+      
+      M_Grp_1_2_Axe2_AFC_good<-M_Grp_1_2_Axe2_AFC_good%>% as.matrix()
       colnames(M_Grp_1_2_Axe2_AFC_good)<-colnames(M_Grp_1_2_Axe2_AFC)
+      ###
       
-      M_Grp_1_2_Axe2_AFC_Naive_good<-tibble(M_Grp_1_2_Axe2_AFC_Naive)%>%
-                                      mutate(across(all_of(starts_with(i)),~NA))%>%
-                                      as.matrix()
+      M_Grp_1_2_Axe2_AFC_Naive_good<-as_tibble(M_Grp_1_2_Axe2_AFC_Naive)
+      for (z in i){
+        M_Grp_1_2_Axe2_AFC_Naive_good<-M_Grp_1_2_Axe2_AFC_Naive_good%>%
+          mutate_at(vars(all_of(starts_with(z))),~NA)
+      }
+      
+      M_Grp_1_2_Axe2_AFC_Naive_good<-M_Grp_1_2_Axe2_AFC_Naive_good%>% as.matrix()
       colnames(M_Grp_1_2_Axe2_AFC_Naive_good)<-colnames(M_Grp_1_2_Axe2_AFC_Naive)
       
   } else
@@ -60,24 +80,44 @@ fct_select_resultAFC<-function() {
   #-- passage en NA des resultats des simulations conciderees comme insufisament informees
   if(length(T_bad_simul_CA$Simul)!=0){
     i<-T_bad_simul_CA%>%pull("Simul")
-      M_Grp_A_B_Axe1_AFC_good<-tibble(M_Grp_A_B_Axe1_AFC)%>%
-                                mutate(across(all_of(starts_with(i)),~NA))%>%
-                                as.matrix()
+    ###
+      M_Grp_A_B_Axe1_AFC_good<-as_tibble(M_Grp_A_B_Axe1_AFC)
+        for (z in i){
+          M_Grp_A_B_Axe1_AFC_good<-M_Grp_A_B_Axe1_AFC_good%>%
+            mutate_at(vars(all_of(starts_with(z))),~NA)
+        }
+      
+      M_Grp_A_B_Axe1_AFC_good<-M_Grp_A_B_Axe1_AFC_good%>% as.matrix()
       colnames(M_Grp_A_B_Axe1_AFC_good)<-colnames(M_Grp_A_B_Axe1_AFC)
+      ###
       
-      M_Grp_A_B_Axe1_AFC_Naive_good<-tibble(M_Grp_A_B_Axe1_AFC_Naive)%>%
-                                      mutate(across(all_of(starts_with(i)),~NA))%>%
-                                      as.matrix()
+      M_Grp_A_B_Axe1_AFC_Naive_good<-as_tibble(M_Grp_A_B_Axe1_AFC_Naive)
+      for (z in i){
+        M_Grp_A_B_Axe1_AFC_Naive_good<-M_Grp_A_B_Axe1_AFC_Naive_good%>%
+          mutate_at(vars(all_of(starts_with(z))),~NA)
+      }
+      
+      M_Grp_A_B_Axe1_AFC_Naive_good<-M_Grp_A_B_Axe1_AFC_Naive_good%>% as.matrix()
       colnames(M_Grp_A_B_Axe1_AFC_Naive_good)<-colnames(M_Grp_A_B_Axe1_AFC_Naive)
+      ###
       
-      M_Grp_A_B_Axe2_AFC_good<-tibble(M_Grp_A_B_Axe2_AFC)%>%
-                                mutate(across(all_of(starts_with(i)),~NA))%>%
-                                as.matrix()
+      M_Grp_A_B_Axe2_AFC_good<-as_tibble(M_Grp_A_B_Axe2_AFC)
+      for (z in i){
+        M_Grp_A_B_Axe2_AFC_good<-M_Grp_A_B_Axe2_AFC_good%>%
+          mutate_at(vars(all_of(starts_with(z))),~NA)
+      }
+      
+      M_Grp_A_B_Axe2_AFC_good<-M_Grp_A_B_Axe2_AFC_good%>% as.matrix()
       colnames(M_Grp_A_B_Axe2_AFC_good)<-colnames(M_Grp_A_B_Axe2_AFC)
+      ###
       
-      M_Grp_A_B_Axe2_AFC_Naive_good<-tibble(M_Grp_A_B_Axe2_AFC_Naive)%>%
-                                      mutate(across(all_of(starts_with(i)),~NA))%>%
-                                      as.matrix()
+      M_Grp_A_B_Axe2_AFC_Naive_good<-as_tibble(M_Grp_A_B_Axe2_AFC_Naive)
+      for (z in i){
+        M_Grp_A_B_Axe2_AFC_Naive_good<-M_Grp_A_B_Axe2_AFC_Naive_good%>%
+          mutate_at(vars(all_of(starts_with(z))),~NA)
+      }
+      
+      M_Grp_A_B_Axe2_AFC_Naive_good<-M_Grp_A_B_Axe2_AFC_Naive_good%>% as.matrix()
       colnames(M_Grp_A_B_Axe2_AFC_Naive_good)<-colnames(M_Grp_A_B_Axe2_AFC_Naive)
       
   } else
@@ -104,24 +144,44 @@ fct_select_resultAFC<-function() {
   #-- passage en NA des resultats des simulations conciderees comme insufisament informees
   if(length(T_bad_simul_CA$Simul)!=0){
     i<-T_bad_simul_CA%>%pull("Simul")
-      M_Grp_Detect_Axe1_AFC_good<-tibble(M_Grp_Detect_Axe1_AFC)%>%
-                                    mutate(across(all_of(starts_with(i)),~NA))%>%
-                                    as.matrix()
+    ###
+      M_Grp_Detect_Axe1_AFC_good<-as_tibble(M_Grp_Detect_Axe1_AFC)
+      for (z in i){
+        M_Grp_Detect_Axe1_AFC_good<-M_Grp_Detect_Axe1_AFC_good%>%
+          mutate_at(vars(all_of(starts_with(z))),~NA)
+      }
+      
+      M_Grp_Detect_Axe1_AFC_good<-M_Grp_Detect_Axe1_AFC_good%>% as.matrix()
       colnames(M_Grp_Detect_Axe1_AFC_good)<-colnames(M_Grp_Detect_Axe1_AFC)
+      ###
       
-      M_Grp_Detect_Axe1_AFC_Naive_good<-tibble(M_Grp_Detect_Axe1_AFC_Naive)%>%
-                                          mutate(across(all_of(starts_with(i)),~NA))%>%
-                                          as.matrix()
+      M_Grp_Detect_Axe1_AFC_Naive_good<-as_tibble(M_Grp_Detect_Axe1_AFC_Naive)
+      for (z in i){
+        M_Grp_Detect_Axe1_AFC_Naive_good<-M_Grp_Detect_Axe1_AFC_Naive_good%>%
+          mutate_at(vars(all_of(starts_with(z))),~NA)
+      }
+      
+      M_Grp_Detect_Axe1_AFC_Naive_good<-M_Grp_Detect_Axe1_AFC_Naive_good%>% as.matrix()
       colnames(M_Grp_Detect_Axe1_AFC_Naive_good)<-colnames(M_Grp_Detect_Axe1_AFC_Naive)
+      ###
       
-      M_Grp_Detect_Axe2_AFC_good<-tibble(M_Grp_Detect_Axe2_AFC)%>%
-                                    mutate(across(all_of(starts_with(i)),~NA))%>%
-                                    as.matrix()
+      M_Grp_Detect_Axe2_AFC_good<-as_tibble(M_Grp_Detect_Axe2_AFC)
+      for (z in i){
+        M_Grp_Detect_Axe2_AFC_good<-M_Grp_Detect_Axe2_AFC_good%>%
+          mutate_at(vars(all_of(starts_with(z))),~NA)
+      }
+      
+      M_Grp_Detect_Axe2_AFC_good<-M_Grp_Detect_Axe2_AFC_good%>% as.matrix()
       colnames(M_Grp_Detect_Axe2_AFC_good)<-colnames(M_Grp_Detect_Axe2_AFC)
+      ###
       
-      M_Grp_Detect_Axe2_AFC_Naive_good<-tibble(M_Grp_Detect_Axe2_AFC_Naive)%>%
-                                          mutate(across(all_of(starts_with(i)),~NA))%>%
-                                          as.matrix()
+      M_Grp_Detect_Axe2_AFC_Naive_good<-as_tibble(M_Grp_Detect_Axe2_AFC_Naive)
+      for (z in i){
+        M_Grp_Detect_Axe2_AFC_Naive_good<-M_Grp_Detect_Axe2_AFC_Naive_good%>%
+          mutate_at(vars(all_of(starts_with(z))),~NA)
+      }
+      
+      M_Grp_Detect_Axe2_AFC_Naive_good<-M_Grp_Detect_Axe2_AFC_Naive_good%>% as.matrix()
       colnames(M_Grp_Detect_Axe2_AFC_Naive_good)<-colnames(M_Grp_Detect_Axe2_AFC_Naive)
       
   } else
@@ -148,24 +208,43 @@ fct_select_resultAFC<-function() {
   #-- passage en NA des resultats des simulations conciderees comme insufisament informees
   if(length(T_bad_simul_CA$Simul)!=0){
     i<-T_bad_simul_CA%>%pull("Simul")
-      M_Grp_Detect_Axe1_AFC_good<-tibble(M_Grp_Detect_Axe1_AFC)%>%
-                                    mutate(across(all_of(starts_with(i)),~NA))%>%
-                                    as.matrix()
+      M_Grp_Detect_Axe1_AFC_good<-as_tibble(M_Grp_Detect_Axe1_AFC)
+        for (z in i){
+          M_Grp_Detect_Axe1_AFC_good<-M_Grp_Detect_Axe1_AFC_good%>%
+            mutate_at(vars(all_of(starts_with(z))),~NA)
+        }
+      
+      M_Grp_Detect_Axe1_AFC_good<-M_Grp_Detect_Axe1_AFC_good%>% as.matrix()
       colnames(M_Grp_Detect_Axe1_AFC_good)<-colnames(M_Grp_Detect_Axe1_AFC)
+      ###
       
-      M_Grp_Detect_Axe1_AFC_Naive_good<-tibble(M_Grp_Detect_Axe1_AFC_Naive)%>%
-                                          mutate(across(all_of(starts_with(i)),~NA))%>%
-                                          as.matrix()
+      M_Grp_Detect_Axe1_AFC_Naive_good<-as_tibble(M_Grp_Detect_Axe1_AFC_Naive)
+      for (z in i){
+        M_Grp_Detect_Axe1_AFC_Naive_good<-M_Grp_Detect_Axe1_AFC_Naive_good%>%
+          mutate_at(vars(all_of(starts_with(z))),~NA)
+      }
+      
+      M_Grp_Detect_Axe1_AFC_Naive_good<-M_Grp_Detect_Axe1_AFC_Naive_good%>% as.matrix()
       colnames(M_Grp_Detect_Axe1_AFC_Naive_good)<-colnames(M_Grp_Detect_Axe1_AFC_Naive)
+      ###
       
-      M_Grp_Detect_Axe2_AFC_good<-tibble(M_Grp_Detect_Axe2_AFC)%>%
-                                    mutate(across(all_of(starts_with(i)),~NA))%>%
-                                    as.matrix()
+      M_Grp_Detect_Axe2_AFC_good<-as_tibble(M_Grp_Detect_Axe2_AFC)
+      for (z in i){
+        M_Grp_Detect_Axe2_AFC_good<-M_Grp_Detect_Axe2_AFC_good%>%
+          mutate_at(vars(all_of(starts_with(z))),~NA)
+      }
+      
+      M_Grp_Detect_Axe2_AFC_good<-M_Grp_Detect_Axe2_AFC_good%>% as.matrix()
       colnames(M_Grp_Detect_Axe2_AFC_good)<-colnames(M_Grp_Detect_Axe2_AFC)
+      ###
       
-      M_Grp_Detect_Axe2_AFC_Naive_good<-tibble(M_Grp_Detect_Axe2_AFC_Naive)%>%
-                                          mutate(across(all_of(starts_with(i)),~NA))%>%
-                                          as.matrix()
+      M_Grp_Detect_Axe2_AFC_Naive_good<-as_tibble(M_Grp_Detect_Axe2_AFC_Naive)
+      for (z in i){
+        M_Grp_Detect_Axe2_AFC_Naive_good<-M_Grp_Detect_Axe2_AFC_Naive_good%>%
+          mutate_at(vars(all_of(starts_with(z))),~NA)
+      }
+      
+      M_Grp_Detect_Axe2_AFC_Naive_good<-M_Grp_Detect_Axe2_AFC_Naive_good%>% as.matrix()
       colnames(M_Grp_Detect_Axe2_AFC_Naive_good)<-colnames(M_Grp_Detect_Axe2_AFC_Naive)
       
   } else
@@ -192,9 +271,14 @@ fct_select_resultAFC<-function() {
   #-- passage en NA des resultats des simulations conciderees comme insufisament informees
   if(length(T_bad_simul_CA$Simul)!=0){
     i<-T_bad_simul_CA%>%pull("Simul")
-      M_Inertia_Plan1_AFC_good<-tibble(M_Inertia_Plan1_AFC)%>%
-                                  mutate(across(all_of(starts_with(i)),~NA))%>%
-                                  as.matrix()
+    ###
+      M_Inertia_Plan1_AFC_good<-as_tibble(M_Inertia_Plan1_AFC)
+        for (z in i){
+          M_Inertia_Plan1_AFC_good<-M_Inertia_Plan1_AFC_good%>%
+            mutate_at(vars(all_of(starts_with(z))),~NA)
+        }
+      
+      M_Inertia_Plan1_AFC_good<-M_Inertia_Plan1_AFC_good%>% as.matrix()
       colnames(M_Inertia_Plan1_AFC_good)<-colnames(M_Inertia_Plan1_AFC)
       
   } else 
@@ -216,9 +300,14 @@ fct_select_resultAFC<-function() {
   #-- passage en NA des resultats des simulations conciderees comme insufisament informees
   if(length(T_bad_simul_CA$Simul)!=0){
     i<-T_bad_simul_CA%>%pull("Simul")
-      M_Resultat_RV_AFC_good<-tibble(M_Resultat_RV_AFC)%>%
-                                mutate(across(all_of(starts_with(i)),~NA))%>%
-                                as.matrix()
+    ###
+      M_Resultat_RV_AFC_good<-as_tibble(M_Resultat_RV_AFC)
+        for (z in i){
+          M_Resultat_RV_AFC_good<-M_Resultat_RV_AFC_good%>%
+            mutate_at(vars(all_of(starts_with(z))),~NA)
+        }
+      
+      M_Resultat_RV_AFC_good<-M_Resultat_RV_AFC_good%>% as.matrix()
       colnames(M_Resultat_RV_AFC_good)<-colnames(M_Resultat_RV_AFC)
       
   } else
@@ -239,9 +328,14 @@ fct_select_resultAFC<-function() {
   #-- passage en NA des resultats des simulations conciderees comme insufisament informees
   if(length(T_bad_simul_CA$Simul)!=0){
     i<-T_bad_simul_CA%>%pull("Simul")
-      M_Resultat_RV_AFC_good<-tibble(M_Resultat_RV_AFC)%>%
-                                mutate(across(all_of(starts_with(i)),~NA))%>%
-                                as.matrix()
+    ###
+      M_Resultat_RV_AFC_good<-as_tibble(M_Resultat_RV_AFC)
+      for (z in i){
+        M_Resultat_RV_AFC_good<-M_Resultat_RV_AFC_good%>%
+          mutate_at(vars(all_of(starts_with(z))),~NA)
+      }
+      
+      M_Resultat_RV_AFC_good<-M_Resultat_RV_AFC_good%>% as.matrix()
       colnames(M_Resultat_RV_AFC_good)<-colnames(M_Resultat_RV_AFC)
       
   } else

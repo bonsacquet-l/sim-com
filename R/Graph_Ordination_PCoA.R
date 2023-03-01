@@ -28,6 +28,8 @@ analyse<-"PCoA"
 distan<-"bray"
 fichier<-"D4_C3_05"
 #fichier<-"D1_C3_01"
+#fichier<-"D3_C2_05"
+fichier<-"D1_C2_01"
 
 simul<-1000
 

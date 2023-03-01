@@ -335,6 +335,8 @@ Fct_Graph_RV_Sp_par_2_tiff(Detection="D1",
                               graph_1="PCoA_bray",graph_2="PCoA_chao")
 Fct_Graph_RV_Sp_par_2_tiff(Detection="D1",
                               graph_1="nMDS_bray",graph_2="nMDS_chao")
+Fct_Graph_RV_Sp_par_2_tiff(Detection="D1",
+                           graph_1="AFC",graph_2="nMDS_bray")
 
 # D2  # -----------------
 
